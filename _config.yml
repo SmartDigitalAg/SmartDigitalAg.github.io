@@ -11,7 +11,9 @@ email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Website of the AllanLab.
 baseurl: ""
-url: "SmartDigitalAg.github.io"
+url: "https://SmartDigitalAg.github.io/"
+remote_theme : mpa139/allanlab
+future: true
 
 include:
   - .htaccess
