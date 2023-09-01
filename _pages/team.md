@@ -8,10 +8,10 @@ permalink: /team/
 
 # Group Members
 
- **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
+[//]: # ( **We are  looking for new PhD students, Postdocs, and Master students to join the team** [&#40;see openings&#41;]&#40;{{ site.url }}{{ site.baseurl }}/vacancies&#41; **!**)
+전북대학교 스마트팜학과 스마트디지털농업 연구실 구성원 입니다.
 
-
-Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors).
+[//]: # (Jump to [staff]&#40;#staff&#41;, [master and bachelor students]&#40;#master-and-bachelor-students&#41;, [alumni]&#40;#alumni&#41;, [administrative support]&#40;#administrative-support&#41;, [lab visitors]&#40;#lab-visitors&#41;.)
 
 ## Staff
 {% assign number_printed = 0 %}
@@ -189,25 +189,36 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 
 [//]: # ({% endif %})
 
-## Former visitors, BSc/ MSc students
+## Former BSc/ MSc students
 <div class="row">
 
-<div class="col-sm-4 clearfix">
-<h4>Visitors</h4>
-{% for member in site.data.alumni_visitors %}
-{{ member.name }}
-{% endfor %}
-</div>
+[//]: # (<div class="col-sm-4 clearfix">)
+
+[//]: # (<h4>Visitors</h4>)
+
+[//]: # ({% for member in site.data.alumni_visitors %})
+
+[//]: # ({{ member.name }})
+
+[//]: # ({% endfor %})
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<div class="col-sm-4 clearfix">)
+
+[//]: # (<h4>Master students</h4>)
+
+[//]: # ({% for member in site.data.alumni_msc %})
+
+[//]: # ({{ member.name }})
+
+[//]: # ({% endfor %})
+
+[//]: # (</div>)
 
 <div class="col-sm-4 clearfix">
-<h4>Master students</h4>
-{% for member in site.data.alumni_msc %}
-{{ member.name }}
-{% endfor %}
-</div>
-
-<div class="col-sm-4 clearfix">
-<h4>Bachelor Students</h4>
+<h4>under graduate education</h4>
 {% for member in site.data.alumni_bsc %}
 {{ member.name }}
 {% endfor %}
