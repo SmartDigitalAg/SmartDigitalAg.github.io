@@ -8,18 +8,37 @@
 #  education3:
 #  education4:
 
-- name: Ilse Kuijf 
-  photo: rock.jpg
-  info: Master student
+- name: 석승원 (Seungwon Seok)
+  photo: yeah.jpg
+  info: Undergraduate education
   email: m.ortego.larrazabal@umail.leidenuniv.nl
   number_educ: 0
   education1:
 
-- name: Tessa Van der Ent
+- name: 전혜진
   photo: rock.jpg
-  info: Master student
+  info: Undergraduate education
   email: m.ortego.larrazabal@umail.leidenuniv.nl
   number_educ: 0
   education1:
 
+- name: 정재영
+  photo: rock.jpg
+  info: Undergraduate education
+  email: m.ortego.larrazabal@umail.leidenuniv.nl
+  number_educ: 0
+  education1:
 
+- name: 하다은
+  photo: rock.jpg
+  info: Undergraduate education
+  email: m.ortego.larrazabal@umail.leidenuniv.nl
+  number_educ: 0
+  education1:
+
+- name: 양희원
+  photo: rock.jpg
+  info: Undergraduate education
+  email: m.ortego.larrazabal@umail.leidenuniv.nl
+  number_educ: 0
+  education1:
