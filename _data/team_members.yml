@@ -1,6 +1,6 @@
 - name: 김태곤 (Taegon Kim)
   photo: professor.jpg
-  info: Associate professor, started Jan 2015
+  info: 조교수
   email: taegon@jbnu.ac.kr
   number_educ: 5
   education1: 2014 서울대학교 지역시스템공학 공학박사
@@ -11,9 +11,9 @@
 
 - name: 김솔희 (Solhee Kim)
   photo: rock.jpg
-  info: Associate professor, started Jan 2015
-  email: taegon@jbnu.ac.kr
-  number_educ: 5
+  info: 연구 조교수
+  email: solhee1101@jbnu.ac.kr
+  number_educ: 0
   education1:
 
 - name: "This could be you !"
