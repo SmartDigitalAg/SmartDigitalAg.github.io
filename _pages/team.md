@@ -6,14 +6,15 @@ sitemap: false
 permalink: /team/
 ---
 
-# Group Members
+[//]: # (# Group Members)
 
-[//]: # ( **We are  looking for new PhD students, Postdocs, and Master students to join the team** [&#40;see openings&#41;]&#40;{{ site.url }}{{ site.baseurl }}/vacancies&#41; **!**)
-전북대학교 스마트팜학과 스마트디지털농업 연구실 구성원 입니다.
+[//]: # ()
+[//]: # ([//]: # &#40; **We are  looking for new PhD students, Postdocs, and Master students to join the team** [&#40;see openings&#41;]&#40;{{ site.url }}{{ site.baseurl }}/vacancies&#41; **!**&#41;)
+[//]: # (전북대학교 스마트팜학과 스마트디지털농업 연구실 구성원 입니다.)
 
 [//]: # (Jump to [staff]&#40;#staff&#41;, [master and bachelor students]&#40;#master-and-bachelor-students&#41;, [alumni]&#40;#alumni&#41;, [administrative support]&#40;#administrative-support&#41;, [lab visitors]&#40;#lab-visitors&#41;.)
 
-## Staff
+## Members
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
 
@@ -176,7 +177,7 @@ permalink: /team/
 [//]: # ({% endif %})
 
 
-## Master and Undergraduate education
+[//]: # (## Master and Undergraduate education)
 {% assign number_printed = 0 %}
 {% for member in site.data.students %}
 
