@@ -11,13 +11,35 @@
     <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">SmartDigitalAg Lab @ JBNU</a>
 	</div>
 	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+
 	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/team">Members</a></li>
+<!--		  <li>-->
+<!--		  <div class="dropdown">-->
+<!--			<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--			Dropdown button-->
+<!--			</button>-->
+<!--			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--			<a class="dropdown-item" href="#">Action</a>-->
+<!--			<a class="dropdown-item" href="#">Another action</a>-->
+<!--			<a class="dropdown-item" href="#">Something else here</a>-->
+<!--			</div>-->
+<!--		  </div></li>-->
+		  <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+		  <li>
+			<div class="dropdown"><a href="{{ site.url }}{{ site.baseurl }}/team" id="dropdownMenuButton" data-toggle="dropdown">Members</a>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}/team">Professor</a></li>
+					<li><a class="dropdown-item" href="#">Current</a></li>
+					<li><a class="dropdown-item" href="#">Alumni</a></li>
+				</ul>
+			</div>
+		</li>
+
 		<li><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Research</a></li>
 		<li><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
 		<li><a href="{{ site.url }}{{ site.baseurl }}/research">Gallery</a></li>
 		<li><a href="{{ site.url }}{{ site.baseurl }}/pictures">Contact</a></li>
+	    <li><a href="{{ site.url }}{{ site.baseurl }}/test">test</a></li>
 	  </ul>
 	</div>
   </div>

@@ -1,68 +1,186 @@
-- title: "A scalable framework for quantifying field-level agricultural carbon outcomes"
+- title: A scalable framework for quantifying field-level agricultural carbon outcomes
   authors: Kaiyu Guan, Zhenong Jin, Bin Peng, Jinyun Tang, Evan H DeLucia, Paul C West, Chongya Jiang, Sheng Wang, <b>Taegon Kim</b>, Wang Zhou, Tim Griffis, Licheng Liu, Wendy H Yang, Ziqi Qin, Qi Yang, Andrew Margenot, Emily R Stuchiner, Vipin Kumar, Carl Bernacchi, Jonathan Coppess, Kimberly A Novick, James Gerber, Molly Jahn, Madhu Khanna, DoKyoung Lee, Zhangliang Chen, Shang-Jen Yang
+  years: (2023)
+  journals: Earth-Science Reviews, 243, 104462
   link:
-    url: https://www.sciencedirect.com/science/article/pii/S0012825223001514
-    display: Earth-Science Reviews 243, 104462 (2023)
+    url: https://doi.org/10.1016/j.earscirev.2023.104462
+    display: doi:10.1016/j.earscirev.2023.104462
   highlight: 1
 
 
 - title: "Energy and environmental performance of a passenger drone for an urban air mobility (UAM) policy with 3D spatial information in Seoul"
   authors: <b>Solhee Kim, Taegon Kim</b>, Kyo Suh, Jeongbae Jeon
+  years: (2023)
+  journals: Journal of Cleaner Production, 137683
   link:
-    url: https://www.sciencedirect.com/science/article/pii/S0959652623018413
-    display: Journal of Cleaner Production, 137683 (2023)
+    url: https://doi.org/10.1016/j.jclepro.2023.137683
+    display: doi:10.1016/j.jclepro.2023.137683
   highlight: 1
 
 - title: "An integrated framework for understanding ecological drought and drought resistance"
   authors: Sayed Shah Jan Sadiqi, Eun-Mi Hong, Won-Ho Nam, <b>Taegon Kim</b>
+  years: (2022)
+  journals: Science of The Total Environment 846, 157477
   link:
-    url: https://www.sciencedirect.com/science/article/pii/S0048969722045752
-    display: Science of The Total Environment 846, 157477 (2022)
+    url: https://doi.org/10.1016/j.scitotenv.2022.157477
+    display: doi:10.1016/j.scitotenv.2022.157477
   highlight: 0
 
 - title: "Distinct driving mechanisms of non-growing season N2O emissions call for spatial-specific mitigation strategies in the US Midwest"
   authors: Yufeng Yang, Licheng Liu, Wang Zhou, Kaiyu Guan, Jinyun Tang, <b>Taegon Kim</b>, Robert F Grant, Bin Peng, Peng Zhu, Ziyi Li, Timothy J Griffis, Zhenong Jin
+  years: (2022)
+  journals: Agricultural and Forest Meteorology 324, 109108
   link:
-    url: https://www.sciencedirect.com/science/article/pii/S0048969722045752
-    display: Agricultural and Forest Meteorology 324, 109108 (2022)
+    url: https://doi.org/10.1016/j.agrformet.2022.109108
+    display: doi:10.1016/j.agrformet.2022.109108
   highlight: 0
 
 - title: "KGML-ag: a modeling framework of knowledge-guided machine learning to simulate agroecosystems: a case study of estimating N2O emission using data from mesocosm experiments"
   authors: Licheng Liu, Shaoming Xu, Jinyun Tang, Kaiyu Guan, Timothy J Griffis, Matthew D Erickson, Alexander L Frie, Xiaowei Jia, <b>Taegon Kim</b>, Lee T Miller, Bin Peng, Shaowei Wu, Yufeng Yang, Wang Zhou, Vipin Kumar, Zhenong Jin
+  years: (2022)
+  journals: Geoscientific Model Development 15 (7), 2839-2858
   link:
-    url: https://gmd.copernicus.org/articles/15/2839/2022/
-    display: Geoscientific Model Development 15 (7), 2839-2858 (2022)
+    url: https://doi.org/10.5194/gmd-15-2839-2022
+    display: doi:10.5194/gmd-15-2839-2022
   highlight: 0
 
 - title: "High-Resolution Environmentally Extended Input–Output Model to Assess the Greenhouse Gas Impact of Electronics in South Korea"
   authors: Yi Yang, Yujin Park, Timothy M Smith, <b>Taegon Kim</b>, Hung-Suck Park
+  years: (2022)
+  journals: Environmental Science & Technology 56 (4), 2107-2114
   link:
-    url: https://pubs.acs.org/doi/full/10.1021/acs.est.1c05451
-    display: Environmental Science & Technology 56 (4), 2107-2114 (2022)
+    url: https://doi.org/10.1021/acs.est.1c05451
+    display: doi:10.1021/acs.est.1c05451
+  highlight: 0
+
+- title: "The critical benefits of snowpack insulation and snowmelt for winter wheat productivity, Nature Climate Change"
+  authors: Peng Zhu, <b>Taegon Kim</b>, Zhenong Jin, Chenxi Lin, Xuhui Wang, Philippe Ciais, Nathaniel D. Mueller, Amir Aghakouchak, Jianxi Huang, David Mulla, David Makowski
+  years: (2022)
+  journals: Nature Climate Change 12, 485–490
+  link:
+    url: https://doi.org/10.1038/s41558-022-01327-3
+    display: doi:10.1038/s41558-022-01327-3
   highlight: 0
 
 
 - title: "A roadmap toward scalably quantifying field-level agricultural carbon outcome"
   authors: Kaiyu Guan, Zhenong Jin, Evan H DeLucia, Paul West, Bin Peng, Jinyun Tang, Chongya Jiang, Sheng Wang, <b>Taegon Kim</b>, Wang Zhou, Timothy Griffis, Licheng Liu, Ziqi Qin, Andrew J Margenot, Vipin Kumar, Carl J Bernacchi, Wendy H Yang, DoKyoung Lee, Jonathan W Coppess, James Gerber, Molly Jahn, Madhu Khanna, Shang-Jen Yang
+  years: (2021)
+  journals: EarthArXiv
   link:
     url:
-    display: EarthArXiv
+    display:
   highlight: 0
 
 
 - title: "Land use leverage points to reduce GHG emissions in US agricultural supply chains"
   authors: Rylie EO Pelton, Seth A Spawn-Lee, Tyler J Lark, <b>Taegon Kim</b>, Nathaniel Springer, Peter Hawthorne, Deepak K Ray, Jennifer Schmitt
+  years: (2021)
+  journals: Environmental Research Letters 16 (11), 115002
   link:
     url: https://iopscience.iop.org/article/10.1088/1748-9326/ac2775/meta
-    display: Environmental Research Letters 16 (11), 115002
+    display: doi:10.1088/1748-9326/ac2775
   highlight: 0
 
 
 - title: "Quantifying nitrogen loss hotspots and mitigation potential for individual fields in the US Corn Belt with a metamodeling approach"
   authors: <b>Taegon Kim</b>, Zhenong Jin, Timothy M Smith, Licheng Liu, Yufeng Yang, Yi Yang, Bin Peng, Kathryn Phillips, Kaiyu Guan, Luyi C Hunter, Wang Zhou
+  years: (2021)
+  journals: Environmental Research Letters 16 (7), 075008
   link:
     url: https://iopscience.iop.org/article/10.1088/1748-9326/ac0d21/meta
-    display: Environmental Research Letters 16 (7), 075008
+    display: doi:10.1088/1748-9326/ac0d21
+  highlight: 0
+
+
+- title: "Unique water scarcity footprints and water risks in US meat and ethanol supply chains identified via subnational commodity flows, Environmental Research Letters"
+  authors: Kate A Brauman, Andrew L. Goodkind, <b>Taegon Kim</b>, Rylie E. O. Pelton, Jennifer Schmitt, Timothy M. Smith
+  years: (2020)
+  journals: Environmental Research Letters, 15, 10
+  link:
+    url: https://doi.org/10.1088/1748-9326/ab9a6a
+    display: doi:10.1088/1748-9326/ab9a6a
+  highlight: 0
+
+- title: "Effects of spatial scale on life cycle inventory results, Environmental Science & Technology"
+  authors: Yi Yang, Rylie E. O. Pelton, <b>Taegon Kim</b>, and Timothy M. Smith
+  years: (2019)
+  journals: Environmental Science & Technology 54 (3), 1293-1303
+  link:
+    url: https://doi.org/10.1021/acs.est.9b03441
+    display: doi:10.1021/acs.est.9b03441
+  highlight: 0
+
+- title: "Environmental Implications of Eco-Labeling for Rice Farming Systems"
+  authors: <b>Solhee Kim</b>, <b>Taegon Kim</b>, Timothy M. Smith and Kyo Suh
+  years: (2018)
+  journals: Sustainability 10 (4), 1050
+  link:
+    url: https://doi.org/10.3390/su10041050
+    display: doi:10.3390/su10041050
+  highlight: 0
+
+- title: "A Comparative Analysis of the Environmental Benefits of Drone-Based Delivery Services in Urban and Rural Areas"
+  authors: Jiyoon Park, <b>Solhee Kim</b> and Kyo Suh
+  years: (2018)
+  journals: Sustainability 10 (3), 888
+  link:
+    url: https://doi.org/10.3390/su10030888
+    display: doi:10.3390/su10030888
+  highlight: 0
+
+- title: "Subnational mobility and consumption-based environmental accounting of US corn in animal protein and ethanol supply chains, Proceedings of the National Academy of Sciences of the United States of America"
+  authors: Timothy M. Smith, Andrew L. Goodkind, <b>Taegon Kim</b>, Rylie E. O. Pelton, Kyo Suh, and Jennifer Schmitt
+  years: (2017)
+  journals: Proceedings of the National Academy of Sciences 114(38), E7891-E7899
+  link:
+    url: https://doi.org/10.1073/pnas.1703793114
+    display: doi:10.1073/pnas.1703793114
+  highlight: 0
+
+- title: "Design and Implementation of Reference Evapotranspiration Database for Future Climate Scenarios, Journal of Korean Society of Rural Planning"
+  authors: <b>Taegon Kim</b>, Kyo Suh, Won-Ho Nam, Jemyung Lee, Syewoon Hwang, Seung-Hwan Yoo, and Soun-Ouk Hong
+  years: (2016)
+  journals: Journal of Korean Society of Rural Planning 22 (4), 71-80
+  link:
+    url: https://doi.org/10.7851/ksrp.2016.22.4.071
+    display: doi:10.7851/ksrp.2016.22.4.071
+  highlight: 0
+
+- title: "Numerical Solution of Second Order Linear Partial Differential Equations using Agricultural Systems Application Platform, Journal of The Korean Society of Agricultural Engineers"
+  authors: SungYong Lee, <b>Taegon Kim</b>, Kyo Suh, Yicheol Han, Jemyung Lee, Hojae Yi, and JeongJae Lee
+  years: (2016)
+  journals: Journal of The Korean Society of Agricultural Engineers 58 (1), 81-90
+  link:
+    url: https://doi.org/10.5389/KSAE.2016.58.1.081
+    display: doi:10.5389/KSAE.2016.58.1.081
+  highlight: 0
+
+- title: "Development of RESTful Web Service for Loading Data focusing on Daily Meteorological Data, Journal of The Korean Society of Agricultural Engineers"
+  authors: <b>Taegon Kim</b>, JeongJae Lee, Won-Ho Nam, and Kyo Suh
+  years: (2014)
+  journals: Journal of The Korean Society of Agricultural Engineers 56 (6), 93-102
+  link:
+    url: https://doi.org/10.5389/KSAE.2014.56.6.093
+    display: doi:10.5389/KSAE.2014.56.6.093
+  highlight: 0
+
+- title: "Environmental and Economic Implications of Bioethanol Blending for the Renewable Fuel Standard in South Korea, Transactions of the ASABE"
+  authors: <b>Taegon Kim</b>, Jimin Lee, SungYong Lee, and Kyo Suh
+  years: (2014)
+  journals: Transactions of the ASABE 57 (5), 1415-1424
+  link:
+    url: https://doi.org/10.13031/trans.57.10507
+    display: doi:10.13031/trans.57.10507
+  highlight: 0
+
+- title: "Development of GASS2 through Improving Inter-component Connection and Communication Modules, Journal of The Korean Society of Agricultural Engineers"
+  authors: <b>Taegon Kim</b>, SungYong Lee, Hojae Yi, JeongJae Lee, and Kyo Suh
+  years: (2014)
+  journals: Journal of The Korean Society of Agricultural Engineers 56 (5), 29-36
+  link:
+    url: https://doi.org/10.5389/KSAE.2014.56.5.029
+    display: doi:10.5389/KSAE.2014.56.5.029
   highlight: 0
 
 
@@ -74,29 +192,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- title: "Direct evidence for Cooper pairing without a spectral gap in a disordered superconductor above Tc"
-  image: Pairs3.png
-  description: We use our atomic-scale scanning tunneling noise setup on a disordered superconductor, and discover a state above TC that, much like an ordinary metal, has no (pseudo)gap, but carries charge via paired electrons.
-  authors: KM Bastiaans, D Chatzopoulos, J-F Ge, D Cho, WO Tromp, JM van Ruitenbeek, MH Fischer, PJ de Visser, DJ Thoen, EFC Driessen, TM Klapwijk, MP Allan
-  link:
-    url: https://www.science.org/doi/10.1126/science.abe3987
-    display: Science 374, 608 (2021)
-  highlight: 1
-  news1:   <a style="color:#FF0000" href="https://www.nature.com/articles/s41567-021-01468-w">Featured as 'Research Highlight' in Nature Physics by David Abergel</a>
-  news2: See [Physics World](https://physicsworld.com/a/cooper-pairs-spotted-above-critical-temperature-for-superconductivity/), [SRON news](https://www.sron.nl/news/5169-elektronparen-blijven-stabiel-boven-kritische-temperatuur-supergeleiding), [TU Delft news](https://www.tudelft.nl/en/2021/eemcs/inexplicably-stable-electron-pairs-without-superconductivity), [Leiden news](https://www.universiteitleiden.nl/en/news/2021/10/new-quantum-liquid-discovered).
 
 

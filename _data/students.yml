@@ -8,6 +8,13 @@
 #  education3:
 #  education4:
 
+- name: 김솔희 (Solhee Kim)
+  photo: solhee.jpg
+  info: 연구 조교수
+  email: solhee1101@jbnu.ac.kr
+  number_educ: 0
+  education1:
+
 - name: 석승원 (Seungwon Seok)
   photo: seungwon.jpg
   info: 학사 과정
