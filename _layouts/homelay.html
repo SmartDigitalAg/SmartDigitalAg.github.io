@@ -2,12 +2,66 @@
 layout: default
 ---
 
-<div class="col-sm-2"></div>
-<div id="homeid" class="col-sm-8">
-
+<div class="col-2"></div>
+<div id="homeid" class="col-8">
+    <div class="text-center" style="margin-bottom: 50px; font-size: 64px;">
+        Smart Digital Agriculture Lab
+    </div>
 	{{ content }}
+    <h2>Album</h2>
+	<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover" >
+    <!-- Menu -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#carousel" data-slide-to="3"></li>
+        <li data-target="#carousel" data-slide-to="4"></li>
+        <li data-target="#carousel" data-slide-to="5"></li>
+    </ol>
+
+
+        <div class="carousel-inner">
+    <div class="item active">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+            <img src="http://localhost:4000/images/landingpic/SDA.jpg" alt="Slide 1" style="height: 100%; width: 100%; object-fit: cover;" />
+        </div>
+    </div>
+    <div class="item">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+            <img src="http://localhost:4000/images/landingpic/hj1.jpg" alt="Slide 1" style="height: 100%; width: 100%; object-fit: cover;" />
+        </div>
+    </div>
+    <div class="item">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+            <img src="http://localhost:4000/images/landingpic/dana3.jpg" alt="Slide 2" style="height: 100%; width: 100%; object-fit: cover;"/>
+        </div>
+    </div>
+    <div class="item">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+            <img src="http://localhost:4000/images/landingpic/ethan3.jpg" alt="Slide 3" style="height: 100%; width: 100%; object-fit: cover;"/>
+        </div>
+    </div>
+     <div class="item">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+            <img src="http://localhost:4000/images/landingpic/ethan6.jpg" alt="Slide 3" style="height: 100%; width: 100%; object-fit: cover;"/>
+    </div>
+    </div>
+    <div class="item">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+            <img src="http://localhost:4000/images/landingpic/jaeyoung1.jpg" alt="Slide 4" style="height: 100%; width: 100%; object-fit: cover;"/>
+        </div>
+    </div>
 </div>
-<div class="col-sm-2"></div>
-<!--  <div id="newsid" class="col-sm-4" >-->
-<!--	{% include news.html %}-->
-<!--  </div>-->
+<!--		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">-->
+<!--		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--		<span class="sr-only">Previous</span>-->
+<!--		</a>-->
+<!--		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">-->
+<!--		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--		<span class="sr-only">Next</span>-->
+<!--		 </a>-->
+
+	</div>
+<div class="col-2"></div>
+</div>
