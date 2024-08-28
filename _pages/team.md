@@ -35,7 +35,9 @@ permalink: /team/
   <p>Lab: {{ member.lab }}</p>
   <p>Lab Phone: {{ member.lab_phone }}</p>
   <p>Email: {{ member.email }}</p>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.homepage }}">
+  <a href="https://code.taegon.kr/"><img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.homepage }}" style="width: 50px; height: 50px;"></a>
+    <a href="https://github.com/taegon"><img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.github }}" style="width: 50px; height: 50px;">
+    </a>
 </div>
 {% assign number_printed = number_printed | plus: 1 %}
 
