@@ -1,39 +1,44 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that.
-# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
-# If you change this file, please restart the server process.
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+title: 스마트디지털농업 연구실
+email: taegon@jbnu.ac.kr
+description: > # this means to ignore newlines until "baseurl:"
+  전북대학교 스마트팜학과 디지털 농업 연구실 입니다.
+baseurl: ""
+url: "https://SmartDigitalAg.github.io/"
+remote_theme : jekyll-agency
+future: true
 
-theme: jekyll-agency
+include:
+  - .htaccess
+  - _pages
 
-url: "https://smartdigitalag.github.io"
-baseurl: "/SmartDigitalAg.github.io" # 레포 이름
+sass:
+  sass_dir: _sass
 
-title      : SDA
-email      : soso0469@naver.com #this is also the email contact forms will go to
-description: "Site description"
-author     : oosim
-# logo:     #optional, defaults to site title
-  # path: assets\img\clients\creative-market.jpg -> 로고 경로
-  # height: 60 #height in px, defaults to 52px -> 로고 크기
-
-locale: "en-US" # See available languages in _data/sitetext.yml
-
-analytics:
-  google: #Google Analytics tracking code here -> 방문자 통계
-
-collections:
-  portfolio:
-
+# Conversion
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-# Uncomment following line to use Formspree form ID based URL instead of email based URL
-# Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
-# formspree_form_path: "f/a_form_id"
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
