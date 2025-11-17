@@ -18,5 +18,5 @@ group :runtime, :all do
 
   # dnsruby < 1.72.3 의 warning 회피용 임시 대응
   # Gemfile 안에서 `require 'dnsruby'` 를 호출하면 아직 gem 이 설치 안 된 상태라 에러가 나므로 제거
-  gem 'base64', '~> 0.2.0'
+  gem 'base64', '~> 0.3.0'
 end
