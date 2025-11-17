@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
+	<head>
+		{% include head.html %}
+	</head>
+  <body id="page-top">
 
-  {% include head.html %}
+	  {% if page.nav == "post" %}
+		{% include post_nav.html %}
+	  {% else %}
+		{% include nav.html %}
+	  {% endif %}
 
-  <body>
+		{{ content }}
 
-    {% include header.html %}
-<!--    <div class="bg-container">-->
-<!--        <div class="bg-image"></div>-->
-<!--    </div>-->
-    <div class="container-fluid content-wrapper" style="margin-top: 100px; margin-bottom: 150px;">
-      <div class="row" >
-        {{ content }}
-      </div>
-    </div>
+	  {% include footer.html %}
 
-    {% include footer.html %}
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+	  <script src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="{{ site.baseurl }}/assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="{{ site.baseurl }}/assets/js/jqBootstrapValidation.js"></script>
+	  <script src="{{ site.baseurl }}/assets/js/contact_me.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="{{ site.baseurl }}/assets/js/agency.min.js"></script>
 
   </body>
-
 </html>

@@ -1,0 +1,54 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.navigation[site.locale].nav.<var_name> | default: 'text' }}
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  nav:
+    - title: "Home"
+      url: /
+    - title: "News"
+      url: /#news
+    - title: "Team"
+      url: /#team
+    - title: "Research"
+      url: /#research
+    - title: "Publications"
+      url: /#publications
+    - title: "Program"
+      url: /#program
+
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
+
+# Korean
+# -------
+ko: &DEFAULT_KO
+  nav:
+    - title: "홈"
+      url: /
+    - title: "소식"
+      url: /#news
+    - title: "연구팀"
+      url: /#team
+    - title: "연구내용"
+      url: /#research
+    - title: "논문 및 출판"
+      url: /#publications
+    - title: "교육프로그램"
+      url: /#program
+
+ko-KR:
+  <<: *DEFAULT_KO
