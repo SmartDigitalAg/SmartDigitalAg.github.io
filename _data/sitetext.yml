@@ -245,10 +245,10 @@ en: &DEFAULT_EN
         info: Undergraduate Intern, 2023–2024
         number_educ: 7
       - name: 강다영
-        info: Undergraduate Intern, 2022
+        info: Undergraduate Intern, 2022 - DGIST
         number_educ: 7
       - name: 김솔아
-        info: Undergraduate Intern, 2022
+        info: Undergraduate Intern, 2022 - KAIST
         number_educ: 7
 
 
