@@ -180,7 +180,7 @@ en: &DEFAULT_EN
         info: Master Course
         email: wls5258@jbnu.ac.kr
         number_educ: 4
-        major: Department of Smart Agricultural Convergence
+        major: Agricultural IoT
         social:
           #          - url: #
           #            icon: fas fa-envelope
