@@ -11,7 +11,15 @@
 		{% include nav.html %}
 	  {% endif %}
 
+	  {% if page.nav == "post" %}
+		<div class="post-content-wrapper">
+		  <div class="container post-container">
+			{{ content }}
+		  </div>
+		</div>
+	  {% else %}
 		{{ content }}
+	  {% endif %}
 
 	  {% include footer.html %}
 

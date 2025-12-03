@@ -10,12 +10,34 @@ body {
 }
 
 // Post page content styling
-.container {
+.post-content-wrapper {
+  padding: 40px 0 80px;
+}
+
+.post-container {
+  max-width: 900px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
