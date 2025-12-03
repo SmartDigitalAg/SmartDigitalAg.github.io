@@ -11,14 +11,12 @@ nav: post
 image: /assets/img/news/20251031_농공학회_참석.jpg
 ---
 
-<div class="container" style="padding-top: 40px; padding-bottom: 80px; max-width: 900px; padding-left: 20px; padding-right: 20px;">
-
 ## 2025 한국농공학회 학술발표회 참여
 
 ### 📅 행사 개요
 - **행사명**: 2025 한국농공학회 학술발표회
 - **일시**: 2025년 10월 30일(목) - 31일(금)
-- **장소**: [소노캄 제주 그랜드볼륨]
+- **장소**: 소노캄 제주 그랜드볼륨
 - **주최**: 한국농공학회
 
 ### 🎯 참여 내용
@@ -29,5 +27,3 @@ image: /assets/img/news/20251031_농공학회_참석.jpg
 
 
 *Smart Digital Agriculture Lab, Department of Smart Farm, Jeonbuk National University*
-
-</div>
