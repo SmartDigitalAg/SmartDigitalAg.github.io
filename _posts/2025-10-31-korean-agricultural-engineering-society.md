@@ -11,6 +11,8 @@ nav: post
 image: /assets/img/news/20251031_농공학회_참석.jpg
 ---
 
+<div class="container" style="padding-top: 40px; padding-bottom: 80px; max-width: 900px; padding-left: 20px; padding-right: 20px;">
+
 ## 2025 한국농공학회 학술발표회 참여
 
 ### 📅 행사 개요
@@ -27,3 +29,5 @@ image: /assets/img/news/20251031_농공학회_참석.jpg
 
 
 *Smart Digital Agriculture Lab, Department of Smart Farm, Jeonbuk National University*
+
+</div>
