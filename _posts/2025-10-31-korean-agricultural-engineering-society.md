@@ -23,7 +23,7 @@ image: /assets/img/news/20251031_농공학회_참석.jpg
 
 스마트디지털농업 연구실에서는 이번 학술발표회에 참가하여 최신 연구 성과를 발표하고 관련 분야 전문가들과 교류하는 시간을 가졌습니다.
 
-![학회 참석](/assets/img/news/20251031_농공학회_참석.jpg)
+<img src="/assets/img/news/20251031_농공학회_참석.jpg" alt="학회 참석" style="max-width: 800px; width: 100%; height: auto; display: block; margin: 20px auto;">
 
 
 *Smart Digital Agriculture Lab, Department of Smart Farm, Jeonbuk National University*
