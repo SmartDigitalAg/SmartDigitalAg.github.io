@@ -4,6 +4,21 @@ body {
   @include body-font;
 }
 
+// Fix for fixed navigation covering content
+#page-top {
+  padding-top: 72px;
+}
+
+// Post page content styling
+.container {
+  h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 p {
   line-height: 1.75;
 }
@@ -48,6 +63,12 @@ h6 {
     text-transform: none;
     @include serif-font;
   }
+}
+
+// First section after fixed nav
+.page-section:first-of-type {
+  margin-top: -72px;
+  padding-top: 172px;
 }
 @media (min-width: 768px) {
   section {
