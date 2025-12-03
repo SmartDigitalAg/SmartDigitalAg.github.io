@@ -109,7 +109,7 @@ en: &DEFAULT_EN
         photo: assets/img/team/taegon.jpg
         homepage: homepage.png
         github: github.png
-        info: Assistant Professor
+        info: Associate Professor
         email: taegon@jbnu.ac.kr #fa-solid fa-copy
         number_educ: 1
         education1: Ph.D. in Regional Systems Engineering 2014
@@ -131,7 +131,7 @@ en: &DEFAULT_EN
       ### 박사님(2) ###
       - name: Dr. Solhee Kim
         photo: assets/img/team/solhee.jpg
-        info: Research Assistant Professor
+        info: Research Associate Professor
         email: solhee1101@jbnu.ac.kr
         number_educ: 2
         social:
