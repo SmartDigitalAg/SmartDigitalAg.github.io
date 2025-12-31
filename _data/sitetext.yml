@@ -194,23 +194,23 @@ en: &DEFAULT_EN
         email: miso0469@jbnu.ac.kr
         number_educ: 5
         social:
-#          - url: #
-#            icon: fas fa-envelope
-#          - url: https://facebook.com
-#            icon: fab fa-facebook-f
+          #          - url: #
+          #            icon: fas fa-envelope
+          #          - url: https://facebook.com
+          #            icon: fab fa-facebook-f
           - url: https://github.com/oosim
             icon: fab fa-github
-      - name: Hajong Kim
-        photo: assets/img/team/hajong.jpg
+      - name: kyeongwon Chae
+        photo: assets/img/team/kyeongwon.jpg
         info: Undergraduate Intern
-        email: hajong0625@jbnu.ac.kr
+        email: ckw5183@jbnu.ac.kr
         number_educ: 5
         social:
           #          - url: #
           #            icon: fas fa-envelope
           #          - url: https://facebook.com
           #            icon: fab fa-facebook-f
-          - url: https://github.com/haribari01
+          - url: https://github.com/oenereaty
             icon: fab fa-github
       - name: Eunsu Jang
         photo: assets/img/team/eunsu.jpg
@@ -250,7 +250,9 @@ en: &DEFAULT_EN
       - name: 김솔아
         info: Undergraduate Intern, 2022 - KAIST
         number_educ: 7
-
+      - name: 김하종
+        info: Undergraduate Intern, 2025–2025
+        number_educ: 7
 
 #  contact:
 #    title: "Contact Us"

@@ -1,0 +1,30 @@
+---
+layout: default
+nav: post
+---
+
+<div class="post-content-wrapper">
+  <div class="container post-container">
+      <!-- Meta (date · read time) -->
+    <div class="post-meta text-muted small mb-2">
+      {{ page.date | date: "%b %e" }}
+      ·
+      {{ page.content | number_of_words | divided_by:250 | ceil }} min read
+    </div>
+
+    <!-- Title -->
+    <h1 class="post-title mb-2">
+      {{ page.title }}
+    </h1>
+
+    <!-- Last updated -->
+    {% if page.last_updated %}
+    <div class="text-muted small mb-4">
+      Last updated {{ page.last_updated | date: "%b %e" }}
+    </div>
+    {% endif %}
+    {{ content }}
+  </div>
+</div>
+
+{% include recent_post.html %}

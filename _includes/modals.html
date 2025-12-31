@@ -1,4 +1,10 @@
-<!-- Portfolio Modals -->
+{% comment %}
+Portfolio Modals (TEMPORARILY DISABLED)
+이 블록은 현재 사용하지 않으며, HTML/Liquid 파싱 문제 방지를 위해
+전체를 Liquid 주석으로 처리함
+{% endcomment %}
+
+{% comment %}
 {% for project in site.portfolio %}
 {% if site.locale and site.locale != "" and site.locale != nil %}
 <div
@@ -90,4 +96,4 @@
 </div>
 {% endif %}
 {% endfor %}
-<!-- End Portfolio Modals -->
+{% endcomment %}
