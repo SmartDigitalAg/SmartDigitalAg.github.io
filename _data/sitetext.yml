@@ -188,6 +188,19 @@ en: &DEFAULT_EN
             icon: fab fa-github
 
       ### 학부 연구생(5) ###
+      - name: Huiwon Yang
+        photo: assets/img/team/huiwon.jpg
+        info: Undergraduate Intern
+        email: gmldnjs4212@jbnu.ac.kr
+        number_educ: 5
+        social:
+          #          - url: #
+          #            icon: fas fa-envelope
+          #          - url: https://facebook.com
+          #            icon: fab fa-facebook-f
+          - url: https://github.com/yanghuiwon22
+            icon: fab fa-github
+
       - name: Miso Kim
         photo: assets/img/team/miso.jpg
         info: Undergraduate Intern
@@ -200,18 +213,7 @@ en: &DEFAULT_EN
           #            icon: fab fa-facebook-f
           - url: https://github.com/oosim
             icon: fab fa-github
-      - name: kyeongwon Chae
-        photo: assets/img/team/kyeongwon.jpg
-        info: Undergraduate Intern
-        email: ckw5183@jbnu.ac.kr
-        number_educ: 5
-        social:
-          #          - url: #
-          #            icon: fas fa-envelope
-          #          - url: https://facebook.com
-          #            icon: fab fa-facebook-f
-          - url: https://github.com/oenereaty
-            icon: fab fa-github
+
       - name: Eunsu Jang
         photo: assets/img/team/eunsu.jpg
         info: Undergraduate Intern
@@ -223,6 +225,19 @@ en: &DEFAULT_EN
           #          - url: https://facebook.com
           #            icon: fab fa-facebook-f
           - url: https://github.com/oneunsu-del
+            icon: fab fa-github
+
+      - name: kyeongwon Chae
+        photo: assets/img/team/kyeongwon.jpg
+        info: Undergraduate Intern
+        email: ckw5183@jbnu.ac.kr
+        number_educ: 5
+        social:
+          #          - url: #
+          #            icon: fas fa-envelope
+          #          - url: https://facebook.com
+          #            icon: fab fa-facebook-f
+          - url: https://github.com/oenereaty
             icon: fab fa-github
 
       ### 스태프(6) ###
