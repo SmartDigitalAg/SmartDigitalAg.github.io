@@ -240,6 +240,19 @@ en: &DEFAULT_EN
           - url: https://github.com/oenereaty
             icon: fab fa-github
 
+      - name: seoyoung Im
+        photo: assets/img/team/seoyoung.jpg
+        info: Undergraduate Intern
+        email: syim2003@jbnu.ac.kr
+        number_educ: 5
+        social:
+          #          - url: #
+          #            icon: fas fa-envelope
+          #          - url: https://facebook.com
+          #            icon: fab fa-facebook-f
+          - url: https://github.com/oenereaty
+            icon: fab fa-github
+
       ### 스태프(6) ###
 #      - name: Hyejin Jeon
 #        photo: assets/img/team/hyejin.jpg
