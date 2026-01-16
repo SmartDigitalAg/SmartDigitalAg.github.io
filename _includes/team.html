@@ -44,7 +44,7 @@
 
                 {% if person.number_educ == 1 %}
                   <ul class="list-inline">
-                    <li><strong>Research Interset:</strong> {{ person.major }}</li>
+                    <li><strong>Research Interest:</strong> {{ person.major }}</li>
                     <li><strong>Email:</strong> {{ person.email }}
                       <a class="icon_link" href="#" onclick="copyToClipboard('{{ person.email }}'); return false;">
                         <i class="fas fa-copy"></i>
@@ -54,7 +54,7 @@
                   </ul>
                 {% elsif person.number_educ == 4 %}
                   <ul class="list-inline">
-                    <li><strong>Research Interset:</strong> {{ person.major }}</li>
+                    <li><strong>Research Interest:</strong> {{ person.major }}</li>
                     <li><strong>Email:</strong> {{ person.email }}
                       <a class="icon_link" href="#" onclick="copyToClipboard('{{ person.email }}'); return false;">
                         <i class="fas fa-copy"></i>
