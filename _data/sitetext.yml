@@ -254,7 +254,7 @@ en: &DEFAULT_EN
             icon: fab fa-github
 
       - name: Gyuhyeon Lee
-        photo: assets/img/team/gyuhyeon.jpg
+        photo: assets/img/team/gyuhyeon.png
         info: Undergraduate Intern
         email: gyuhyeoni@jbnu.ac.kr
         number_educ: 5
