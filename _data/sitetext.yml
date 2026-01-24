@@ -150,7 +150,7 @@ en: &DEFAULT_EN
 
       ### 석사 과정(4) ###
       - name: Seungwon Seok
-        photo: assets/img/team/seungwon.jpg
+        photo: assets/img/team/seungwon.png
         info: Master Course
         email: champ9162@jbnu.ac.kr
         number_educ: 4
