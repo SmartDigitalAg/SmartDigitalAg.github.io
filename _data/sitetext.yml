@@ -253,6 +253,19 @@ en: &DEFAULT_EN
           - url: https://github.com/oenereaty
             icon: fab fa-github
 
+      - name: Gyuhyeon Lee
+        photo: assets/img/team/gyuhyeon.jpg
+        info: Undergraduate Intern
+        email: gyuhyeoni@jbnu.ac.kr
+        number_educ: 5
+        social:
+          #          - url: #
+          #            icon: fas fa-envelope
+          #          - url: https://facebook.com
+          #            icon: fab fa-facebook-f
+          - url: https://github.com/ironmanizawesome
+            icon: fab fa-github
+
       ### 스태프(6) ###
 #      - name: Hyejin Jeon
 #        photo: assets/img/team/hyejin.jpg
@@ -266,9 +279,9 @@ en: &DEFAULT_EN
 #            icon: fab fa-github
 
       ### 졸업생 ###
-      - name: 양희원
-        info: Undergraduate Intern, 2023–2025
-        number_educ: 7
+#      - name: 양희원
+#        info: Undergraduate Intern, 2023–2025
+#        number_educ: 7
       - name: 하다은
         info: Undergraduate Intern, 2023–2024
         number_educ: 7
