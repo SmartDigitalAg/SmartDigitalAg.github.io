@@ -14,14 +14,14 @@ en: &DEFAULT_EN
     - title: "Home"
       url: /
     - title: "News"
-      url: /#news
+      url: /news
     - title: "Team"
-      url: /#team
+      url: /team
     - title: "Research"
       url: /#research
     - title: "Publications"
       url: /#publications
-    - title: "Program"
+    - title: "links"
       url: /#program
 
 en-US:
@@ -40,9 +40,9 @@ ko: &DEFAULT_KO
     - title: "홈"
       url: /
     - title: "소식"
-      url: /#news
+      url: /news
     - title: "연구팀"
-      url: /#team
+      url: /team
     - title: "연구내용"
       url: /#research
     - title: "논문 및 출판"

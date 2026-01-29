@@ -3,7 +3,7 @@
 	<head>
 		{% include head.html %}
 	</head>
-  <body id="page-top">
+  <body id="page-top" style="display: flex; flex-direction: column; min-height: 100vh;">
 
 	  {% if page.nav == "post" %}
 		{% include post_nav.html %}
@@ -11,6 +11,7 @@
 		{% include nav.html %}
 	  {% endif %}
 
+	  <main style="flex: 1;">
 	  {% if page.nav == "post" %}
 		<div class="post-content-wrapper">
 		  <div class="container post-container">
@@ -20,6 +21,7 @@
 	  {% else %}
 		{{ content }}
 	  {% endif %}
+	  </main>
 
 	  {% include footer.html %}
 
