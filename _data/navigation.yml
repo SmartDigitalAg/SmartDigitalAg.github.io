@@ -18,11 +18,11 @@ en: &DEFAULT_EN
     - title: "Team"
       url: /team
     - title: "Research"
-      url: /#research
+      url: /research
     - title: "Publications"
-      url: /#publications
-    - title: "links"
-      url: /#program
+      url: /publications
+    - title: "Links"
+      url: /links
 
 en-US:
   <<: *DEFAULT_EN
@@ -44,11 +44,11 @@ ko: &DEFAULT_KO
     - title: "연구팀"
       url: /team
     - title: "연구내용"
-      url: /#research
+      url: /research
     - title: "논문 및 출판"
-      url: /#publications
+      url: /publications
     - title: "교육프로그램"
-      url: /#program
+      url: /links
 
 ko-KR:
   <<: *DEFAULT_KO

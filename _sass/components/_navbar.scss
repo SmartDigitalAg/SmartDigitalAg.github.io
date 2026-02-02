@@ -61,12 +61,18 @@
       }
     }
     &.navbar-shrink {
-      padding-top: 0;
-      padding-bottom: 0;
-      background-color: $gray-900;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: transparent;
       .navbar-brand {
-        font-size: 1.25em;
+        font-size: 1.75em;
         padding: 12px 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .navbar-nav {
+        opacity: 0;
+        visibility: hidden;
       }
     }
   }
