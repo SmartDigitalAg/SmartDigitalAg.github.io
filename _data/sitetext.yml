@@ -14,8 +14,40 @@ en: &DEFAULT_EN
     title: Smart Digital Agriculture
     text: Welcome to our SDA!
     section: home
-    button: RESEARCH
-    buttonlink: "#research"
+
+    fields_title: "Our Focus Areas"
+    fields_text: "Explore six research and application areas of SDA."
+    fields_section: "focus"
+    fields:
+      - title: "Digital Agriculture"
+        desc: "Advancing agricultural production and management through sensor technologies, IoT, and data-driven analytics."
+        image: "assets/img/focus/digital-agriculture.jfif"
+        alt: "Digital agriculture"
+
+      - title: "Crop Modeling"
+        desc: "Developing and applying crop growth and ecophysiological models to predict phenology, yield, and environmental responses."
+        image: "assets/img/focus/crop-modeling.png"
+        alt: "Crop modeling"
+
+      - title: "Satellite Imagery and Remote Sensing"
+        desc: "Monitoring crop and land surface conditions and extracting biophysical information using satellite, UAV, and airborne imagery."
+        image: "assets/img/focus/remote-sensing.webp"
+        alt: "Satellite and remote sensing"
+
+      - title: "Decision Support Systems"
+        desc: "Supporting data-driven decision-making for irrigation, fertilization, and pest and disease management based on field observations."
+        image: "assets/img/focus/decision-support.jpg"
+        alt: "Decision support system"
+
+      - title: "Climate Change Impact Assessment"
+        desc: "Quantifying changes in agricultural productivity and risk under climate change scenarios and evaluating adaptation strategies."
+        image: "assets/img/focus/climate-change.png"
+        alt: "Climate change assessment"
+
+      - title: "Sustainable Agriculture"
+        desc: "Investigating strategies to improve carbon, water, and nutrient use efficiency while reducing environmental impacts."
+        image: "assets/img/focus/sustainable-agriculture.avif"
+        alt: "Sustainable agriculture"
 
   services:
     title: "Research"
@@ -106,6 +138,7 @@ en: &DEFAULT_EN
     people:
       ### 교수님(1) ###
       - name: Dr. Taegon Kim
+        kor_name: 김태곤 교수
         photo: assets/img/team/taegon.jpg
         homepage: homepage.png
         github: github.png
@@ -130,7 +163,8 @@ en: &DEFAULT_EN
 
       ### 박사님(2) ###
       - name: Dr. Solhee Kim
-        photo: assets/img/team/solhee.jpg
+        kor_name: 김솔희 박사
+        photo: assets/img/team/solhee.png
         info: Research Associate Professor
         email: solhee1101@jbnu.ac.kr
         number_educ: 2
@@ -142,6 +176,7 @@ en: &DEFAULT_EN
 #          - url: https://linkedin.com
 #            icon: fab fa-github
       - name: Dr. Donghyeon Kim
+        kor_name: 김동현 박사
         photo: assets/img/team/donghyeon.jpg
         info: Research Assistant Professor
         email: kdh4354@jbnu.ac.kr
@@ -150,6 +185,7 @@ en: &DEFAULT_EN
 
       ### 석사 과정(4) ###
       - name: Seungwon Seok
+        kor_name: 석승원
         photo: assets/img/team/seungwon.png
         info: Master Course
         email: champ9162@jbnu.ac.kr
@@ -163,6 +199,7 @@ en: &DEFAULT_EN
           - url: https://github.com/EthanSeok
             icon: fab fa-github
       - name: Jaeyoung Jung
+        kor_name: 정재영
         photo: assets/img/team/jaeyoung.jpg
         info: Master Course
         email: jyihaan4@jbnu.ac.kr
@@ -176,6 +213,7 @@ en: &DEFAULT_EN
         - url: https://github.com/jungjae0
           icon: fab fa-github
       - name: Hyejin Jeon
+        kor_name: 전혜진
         photo: assets/img/team/hyejin.jpg
         info: Master Course
         email: wls5258@jbnu.ac.kr
@@ -189,6 +227,7 @@ en: &DEFAULT_EN
 
       ### 학부 연구생(5) ###
       - name: Huiwon Yang
+        kor_name: 양희원
         photo: assets/img/team/huiwon.jpg
         info: Undergraduate Intern
         email: gmldnjs4212@jbnu.ac.kr
@@ -202,6 +241,7 @@ en: &DEFAULT_EN
             icon: fab fa-github
 
       - name: Miso Kim
+        kor_name: 김미소
         photo: assets/img/team/miso.jpg
         info: Undergraduate Intern
         email: miso0469@jbnu.ac.kr
@@ -215,6 +255,7 @@ en: &DEFAULT_EN
             icon: fab fa-github
 
       - name: Eunsu Jang
+        kor_name: 장은수
         photo: assets/img/team/eunsu.jpg
         info: Undergraduate Intern
         email: jangdmstn@jbnu.ac.kr
@@ -228,6 +269,7 @@ en: &DEFAULT_EN
             icon: fab fa-github
 
       - name: kyeongwon Chae
+        kor_name: 채경원
         photo: assets/img/team/kyeongwon.jpg
         info: Undergraduate Intern
         email: ckw5183@jbnu.ac.kr
@@ -241,6 +283,7 @@ en: &DEFAULT_EN
             icon: fab fa-github
 
       - name: seoyoung Im
+        kor_name: 임서영
         photo: assets/img/team/seoyoung.jpg
         info: Undergraduate Intern
         email: syim2003@jbnu.ac.kr
@@ -250,10 +293,11 @@ en: &DEFAULT_EN
           #            icon: fas fa-envelope
           #          - url: https://facebook.com
           #            icon: fab fa-facebook-f
-          - url: https://github.com/oenereaty
+          - url: https://github.com/ixiwest0
             icon: fab fa-github
 
       - name: Gyuhyeon Lee
+        kor_name: 이규현
         photo: assets/img/team/gyuhyeon.png
         info: Undergraduate Intern
         email: gyuhyeoni@jbnu.ac.kr
@@ -283,7 +327,7 @@ en: &DEFAULT_EN
 #        info: Undergraduate Intern, 2023–2025
 #        number_educ: 7
       - name: 하다은
-        info: Undergraduate Intern, 2023–2024
+        info: Undergraduate Intern, 2023 - 2024
         number_educ: 7
       - name: 강다영
         info: Undergraduate Intern, 2022 - DGIST
@@ -292,7 +336,7 @@ en: &DEFAULT_EN
         info: Undergraduate Intern, 2022 - KAIST
         number_educ: 7
       - name: 김하종
-        info: Undergraduate Intern, 2025–2025
+        info: Undergraduate Intern, 2025 - 2025
         number_educ: 7
 
 #  contact:

@@ -23,3 +23,12 @@
   height: 200px; /* 고정된 높이 */
   border-radius: 50%; /* 원형으로 만들기 */
 }
+
+// Korean name styling under English name
+.team-kor-name {
+  color: $black;
+  font-size: 1rem; // similar to info text size
+  line-height: 1.2;
+  display: block;
+  margin-top: 0.25rem;
+}

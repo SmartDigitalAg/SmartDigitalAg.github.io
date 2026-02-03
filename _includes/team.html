@@ -30,7 +30,11 @@
           {% for person in role.items %}
             {% if person.number_educ == 7 %}
               <div class="col-sm-12 text-left mb-2">
-                <p><strong>{{ person.name }}</strong>{% if person.info %} ({{ person.info }}){% endif %}</p>
+                <p>
+                  <strong>{{ person.name }}</strong>
+                  {% if person.kor_name %}<br><span class="team-kor-name">{{ person.kor_name }}</span>{% endif %}
+                  {% if person.info %} ({{ person.info }}){% endif %}
+                </p>
               </div>
             {% else %}
             <div class="col-sm-4">
@@ -40,6 +44,7 @@
                 {% endif %}
 
                 <h4>{{ person.name }}</h4>
+                {% if person.kor_name %}<div class="team-kor-name">{{ person.kor_name }}</div>{% endif %}
                 <p class="text-muted">{{ person.info }}</p>
 
                 {% if person.number_educ == 1 %}

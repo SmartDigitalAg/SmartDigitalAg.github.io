@@ -17,12 +17,12 @@ url    : "" # the base hostname & protocol for your site, e.g. http://example.co
 baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : SDA
-email      : soso0469@naver.com #this is also the email contact forms will go to
+email      :
 description: "Site description"
 author     : oosim
-# logo:     #optional, defaults to site title
-  # path: assets\img\clients\creative-market.jpg -> 로고 경로
-  # height: 60 #height in px, defaults to 52px -> 로고 크기
+logo:     #optional, defaults to site title
+   path: images/logo2.png
+   height: 80 #height in px, defaults to 52px -> 로고 크기
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 

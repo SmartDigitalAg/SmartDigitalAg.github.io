@@ -87,6 +87,19 @@ h6 {
   }
 }
 
+.focus-card-img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+  }
+  @media (max-width: 575.98px){
+    .focus-card-img{ height: 180px; }
+  }
+  @media (min-width: 992px){
+    .focus-card-img{ height: 240px; }
+  }
+
 // First section after fixed nav
 .page-section:first-of-type {
   margin-top: -72px;

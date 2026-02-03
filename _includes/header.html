@@ -30,3 +30,37 @@
 </header>
 {% endif %}
 <!-- End Header -->
+
+{% comment %} Focus Area Cards (below header) {% endcomment %}
+{% if site.locale and site.locale != "" and site.locale != nil %}
+  {% assign headerdata = site.data.sitetext[site.locale].header %}
+{% else %}
+  {% assign headerdata = site.data.sitetext.header %}
+{% endif %}
+
+{% if headerdata.fields and headerdata.fields.size > 0 %}
+<section class="page-section bg-light" id="{{ headerdata.fields_section | default: 'focus' }}">
+  <div class="container">
+    <div class="text-center">
+      {% if headerdata.fields_title %}<h2 class="section-heading text-uppercase">{{ headerdata.fields_title | markdownify }}</h2>{% endif %}
+      {% if headerdata.fields_text %}<h3 class="section-subheading text-muted">{{ headerdata.fields_text | markdownify }}</h3>{% endif %}
+    </div>
+
+    <div class="row">
+      {% for f in headerdata.fields %}
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          {% if f.image %}
+          <img class="card-img-top focus-card-img" src="{{ f.image | relative_url }}" alt="{{ f.alt | default: f.title }}">
+          {% endif %}
+          <div class="card-body">
+            {% if f.title %}<h5 class="card-title mb-2">{{ f.title | markdownify }}</h5>{% endif %}
+            {% if f.desc %}<p class="card-text text-muted mb-0">{{ f.desc | markdownify }}</p>{% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
