@@ -69,6 +69,52 @@ en: &DEFAULT_EN
     text: #
     section: news
 
+  links:
+    title: "Links"
+    text: "Useful resources and external sites"
+    section: links
+    items:
+      - title: "A predictive model for wheat growth stages"
+        text: "밀 생육단계 예측 모델"
+        url: "http://web01.taegon.kr:8010/"
+        image: "assets/img/links/wheat-predictive-model.png"
+
+      - title: "Automated travel expense settlement service"
+        text: "여비정산 자동화 서비스"
+        url: "http://web01.taegon.kr:8100/"
+        image: "assets/img/links/travel-expense-automation.png"
+
+      - title: "Agricultural data analysis dashboard"
+        text: "농업 데이터 분석 대시보드"
+        url: "http://web01.taegon.kr:8020/"
+        image: "assets/img/links/agri-data-dashboard.png"
+
+      - title: "Agricultural data integration platform viewer"
+        text: "농업데이터 통합 플랫폼 데이터 조회"
+        url: "http://web01.taegon.kr:8080/"
+        image: "assets/img/links/agri-data-platform.png"
+
+      - title: "President’s recommended restaurant list"
+        text: "총장님 추천 맛집 리스트"
+        url: "http://web01.taegon.kr:8101/"
+        image: "assets/img/links/restaurant-recommendations.png"
+
+      - title: "Agricultural meteorological data API"
+        text: "농업 기상데이터 API"
+        url: "http://weather-rda.digitalag.kr:8005/"
+        image: "assets/img/links/agri-weather-api.png"
+
+      - title: "Overseas crop condition monitoring project"
+        text: "위성과제_국외작황모니터링"
+        url: "http://cropmonitor.digitalag.kr/"
+        image: "assets/img/links/overseas-crop-monitoring.png"
+
+      - title: "Pest classification system"
+        text: "해충 분류"
+        url: "http://web01.taegon.kr:8090/"
+        image: "assets/img/links/pest-classification.png"
+
+
   publications:
     title: "Publications"
     text: "Lorem ipsum dolor sit amet consectetur."

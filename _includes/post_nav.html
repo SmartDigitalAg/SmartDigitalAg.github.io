@@ -3,7 +3,7 @@
   <div class="container">
     <a class="navbar-brand" href="{{ site.baseurl }}/">
       {%- if site.logo and site.logo.path -%}
-        <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path | relative_url }}"/>
+          <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path | relative_url }}"/>
       {%- else -%}
         {{ site.title }}
       {%- endif -%}

@@ -1,0 +1,32 @@
+{% if site.locale and site.locale != "" and site.locale != nil %}
+  {% assign linksdata = site.data.sitetext[site.locale].links %}
+{% else %}
+  {% assign linksdata = site.data.sitetext.links %}
+{% endif %}
+
+<section class="page-section" id="{{ linksdata.section | default: 'links' }}">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">{{ linksdata.title | default: 'Links' }}</h2>
+      {% if linksdata.text %}
+      <h3 class="section-subheading text-muted">{{ linksdata.text }}</h3>
+      {% endif %}
+    </div>
+
+    <div class="row">
+      {% for item in linksdata.items %}
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <a href="{{ item.url }}" class="card h-100 border-0 shadow-sm text-decoration-none" target="_blank" rel="noopener">
+          {% if item.image %}
+          <img class="card-img-top focus-card-img" src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.title }}">
+          {% endif %}
+          <div class="card-body">
+            {% if item.title %}<h5 class="card-title mb-2">{{ item.title }}</h5>{% endif %}
+            {% if item.text %}<p class="card-text text-muted mb-0">{{ item.text }}</p>{% endif %}
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

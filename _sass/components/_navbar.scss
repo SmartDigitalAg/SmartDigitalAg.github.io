@@ -11,6 +11,7 @@
     background-color: $primary;
     @include heading-font;
   }
+
   .navbar-brand {
     color: $primary;
     @include script-font;
@@ -28,8 +29,16 @@
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: black;
         @include heading-font;
+
+        /* 기본: home이 아닐 때 (검정) */
+        color: #000;
+
+        /* home일 때만 흰색 */
+        body.home & {
+          color: white;
+        }
+
         &.active,
         &:hover {
           color: $primary;
@@ -38,6 +47,7 @@
     }
   }
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
