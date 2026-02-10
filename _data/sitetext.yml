@@ -114,6 +114,16 @@ en: &DEFAULT_EN
         url: "http://web01.taegon.kr:8090/"
         image: "assets/img/links/pest-classification.png"
 
+      - title: "Agricultural Statistics Visualization"
+        text: "공공데이터포털 데이터 시각화"
+        url: "http://web01.taegon.kr:8110/"
+        image: "assets/img/links/agriculural-statistics.png"
+
+      - title: "CSV Map Visualization Service"
+        text: "csv 지도 시각화"
+        url: "http://web01.taegon.kr:8120/"
+        image: "assets/img/links/csv-map.png"
+
 
   publications:
     title: "Publications"
