@@ -124,6 +124,11 @@ en: &DEFAULT_EN
         url: "http://web01.taegon.kr:8120/"
         image: "assets/img/links/csv-map.png"
 
+      - title: "Fertilizer and Irrigation Prescription Service"
+        text: "흙토람 서비스"
+        url: "https://agrx.digitalag.kr/"
+        image: "assets/img/links/fertilizer-irrigation.png"
+
 
   publications:
     title: "Publications"
