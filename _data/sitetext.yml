@@ -94,20 +94,10 @@ en: &DEFAULT_EN
         url: "http://web01.taegon.kr:8080/"
         image: "assets/img/links/agri-data-platform.png"
 
-      - title: "President’s recommended restaurant list"
-        text: "총장님 추천 맛집 리스트"
-        url: "http://web01.taegon.kr:8101/"
-        image: "assets/img/links/restaurant-recommendations.png"
-
       - title: "Agricultural meteorological data API"
         text: "농업 기상데이터 API"
         url: "http://weather-rda.digitalag.kr:8005/"
         image: "assets/img/links/agri-weather-api.png"
-
-      - title: "Overseas crop condition monitoring project"
-        text: "위성과제_국외작황모니터링"
-        url: "http://cropmonitor.digitalag.kr/"
-        image: "assets/img/links/overseas-crop-monitoring.png"
 
       - title: "Pest classification system"
         text: "해충 분류"
