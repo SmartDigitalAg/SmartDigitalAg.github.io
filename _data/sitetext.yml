@@ -84,10 +84,10 @@ en: &DEFAULT_EN
         url: "http://web01.taegon.kr:8100/"
         image: "assets/img/links/travel-expense-automation.png"
 
-      - title: "Agricultural data analysis dashboard"
-        text: "농업 데이터 분석 대시보드"
-        url: "http://web01.taegon.kr:8020/"
-        image: "assets/img/links/agri-data-dashboard.png"
+#      - title: "Agricultural data analysis dashboard"
+#        text: "농업 데이터 분석 대시보드"
+#        url: "http://web01.taegon.kr:8020/"
+#        image: "assets/img/links/agri-data-dashboard.png"
 
       - title: "Agricultural data integration platform viewer"
         text: "농업데이터 통합 플랫폼 데이터 조회"
