@@ -21,7 +21,7 @@ email      :
 description: "Site description"
 author     : oosim
 logo:     #optional, defaults to site title
-   path: images/logo4.png
+   path: images/logo8_trim.png
    height: 60 #height in px, defaults to 52px -> 로고 크기
 
 locale: "en-US" # See available languages in _data/sitetext.yml
