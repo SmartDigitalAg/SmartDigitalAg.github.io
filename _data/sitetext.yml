@@ -119,6 +119,11 @@ en: &DEFAULT_EN
         url: "https://agrx.digitalag.kr/"
         image: "assets/img/links/fertilizer-irrigation.png"
 
+      - title: "NIHHS data preprocessing service"
+        text: "원예원 데이터 전처리 서비스"
+        url: "http://web01.taegon.kr:8160/"
+        image: "assets/img/links/NIHHS_data_processing.png"
+
 
   publications:
     title: "Publications"
