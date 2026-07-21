@@ -276,6 +276,21 @@ en: &DEFAULT_EN
           - url: https://github.com/202116302
             icon: fab fa-github
 
+      # - name: Huiwon Yang
+      #   kor_name: 양희원
+      #   photo: assets/img/team/huiwon.jpg
+      #   info: Master Course
+      #   email: gmldnjs4212@jbnu.ac.kr
+      #   number_educ: 4
+      #   major: (fill in your major)
+      #   social:
+      #     #          - url: #
+      #     #            icon: fas fa-envelope
+      #     #          - url: https://facebook.com
+      #     #            icon: fab fa-facebook-f
+      #     - url: https://github.com/yanghuiwon22
+      #       icon: fab fa-github
+
       ### 학부 연구생(5) ###
       - name: Huiwon Yang
         kor_name: 양희원
