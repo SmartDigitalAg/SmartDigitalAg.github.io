@@ -291,19 +291,19 @@ en: &DEFAULT_EN
           - url: https://github.com/yanghuiwon22
             icon: fab fa-github
 
-      - name: Miso Kim
-        kor_name: 김미소
-        photo: assets/img/team/miso.jpg
-        info: Undergraduate Intern
-        email: miso0469@jbnu.ac.kr
-        number_educ: 5
-        social:
-          #          - url: #
-          #            icon: fas fa-envelope
-          #          - url: https://facebook.com
-          #            icon: fab fa-facebook-f
-          - url: https://github.com/oosim
-            icon: fab fa-github
+      # - name: Miso Kim
+      #   kor_name: 김미소
+      #   photo: assets/img/team/miso.jpg
+      #   info: Undergraduate Intern
+      #   email: miso0469@jbnu.ac.kr
+      #   number_educ: 5
+      #   social:
+      #     #          - url: #
+      #     #            icon: fas fa-envelope
+      #     #          - url: https://facebook.com
+      #     #            icon: fab fa-facebook-f
+      #     - url: https://github.com/oosim
+      #       icon: fab fa-github
 
       - name: Eunsu Jang
         kor_name: 장은수
@@ -333,19 +333,19 @@ en: &DEFAULT_EN
           - url: https://github.com/oenereaty
             icon: fab fa-github
 
-      - name: seoyoung Im
-        kor_name: 임서영
-        photo: assets/img/team/seoyoung.jpg
-        info: Undergraduate Intern
-        email: syim2003@jbnu.ac.kr
-        number_educ: 5
-        social:
-          #          - url: #
-          #            icon: fas fa-envelope
-          #          - url: https://facebook.com
-          #            icon: fab fa-facebook-f
-          - url: https://github.com/ixiwest0
-            icon: fab fa-github
+      # - name: seoyoung Im
+      #   kor_name: 임서영
+      #   photo: assets/img/team/seoyoung.jpg
+      #   info: Undergraduate Intern
+      #   email: syim2003@jbnu.ac.kr
+      #   number_educ: 5
+      #   social:
+      #     #          - url: #
+      #     #            icon: fas fa-envelope
+      #     #          - url: https://facebook.com
+      #     #            icon: fab fa-facebook-f
+      #     - url: https://github.com/ixiwest0
+      #       icon: fab fa-github
 
       - name: Gyuhyeon Lee
         kor_name: 이규현
