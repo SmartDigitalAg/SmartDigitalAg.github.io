@@ -417,17 +417,24 @@ en: &DEFAULT_EN
 #      - name: 양희원
 #        info: Undergraduate Intern, 2023–2025
 #        number_educ: 7
-      - name: 하다은
-        info: Undergraduate Intern, 2023 - 2024
-        number_educ: 7
+
       - name: 강다영
         info: Undergraduate Intern, 2022 - DGIST
         number_educ: 7
       - name: 김솔아
         info: Undergraduate Intern, 2022 - KAIST
         number_educ: 7
+      - name: 하다은
+        info: Undergraduate Intern, 2023 - 2024
+        number_educ: 7
+      - name: 김미소
+        info: Undergraduate Intern, 2024 - 2026
+        number_educ: 7
       - name: 김하종
         info: Undergraduate Intern, 2025 - 2025
+        number_educ: 7
+      - name: 임서영
+        info: Undergraduate Intern, 2026 - 2026
         number_educ: 7
 
 #  contact:
