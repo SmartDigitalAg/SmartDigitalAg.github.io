@@ -347,7 +347,7 @@ en: &DEFAULT_EN
 
       - name: Eunsu Jang
         kor_name: 장은수
-        photo: assets/img/team/eunsu.jpg
+        photo: assets/img/team/eunsu_update.jpg
         info: Undergraduate Intern
         email: jangdmstn@jbnu.ac.kr
         number_educ: 5
