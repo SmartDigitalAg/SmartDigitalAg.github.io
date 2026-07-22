@@ -124,6 +124,26 @@ en: &DEFAULT_EN
         url: "http://web01.taegon.kr:8160/"
         image: "assets/img/links/NIHHS_data_processing.png"
 
+      - title: "Greenhouse simulation service"
+        text: "온실 시뮬레이션 서비스"
+        url: "http://web01.taegon.kr:8135/"
+        image: "assets/img/links/greenhouse_sim_service.png"
+
+      - title: "All-sky image dashboard"
+        text: "전천이미지 대시보드"
+        url: "http://web01.taegon.kr:8030/"
+        image: "assets/img/links/sky_img.png"
+
+      - title: "President's recommended restaurants"
+        text: "총장님 추천 맛집"
+        url: "http://web01.taegon.kr:8150/"
+        image: "assets/img/links/chongjangfood.png"
+
+      - title: "JBNU partnership facilities"
+        text: "전북대학교 업무협약 제휴시설"
+        url: "http://web01.taegon.kr:8140/"
+        image: "assets/img/links/placesJBNU.png"
+
 
   publications:
     title: "Publications"
