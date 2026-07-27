@@ -13,6 +13,7 @@ nav: post
     <div class="row">
       {% assign posts = site.categories.news | sort: "date" | reverse %}
       {% for post in posts %}
+      {% unless post.news_board %}
       <div class="col-md-6 col-lg-4 mb-4">
         <a href="{{ post.url }}" class="card h-100 border-0 shadow-sm bg-dark text-white p-4 text-decoration-none">
           <div class="card-body d-flex flex-column justify-content-between">
@@ -32,6 +33,7 @@ nav: post
           </div>
         </a>
       </div>
+      {% endunless %}
 
       {% endfor %}
     </div>

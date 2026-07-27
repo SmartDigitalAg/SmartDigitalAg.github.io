@@ -1,57 +1,40 @@
-<!-- Portfolio Grid -->
+<!-- News: inline year-grouped awards board -->
 {% if site.locale and site.locale != "" and site.locale != nil %}
 <section class="page-section" id="{{ site.data.sitetext.portfolio.section | default: "news" }}">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].news.title | default: "News" }}</h2>
-          {% if site.data.sitetext[site.locale].news.text %}
+        {% if site.data.sitetext[site.locale].news.text %}
         <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].news.text }}</h3>
-		  {% endif %}
+        {% endif %}
       </div>
     </div>
+
+    {% assign board = site.posts | where_exp: "p", "p.news_board" | first %}
+    {% if board %}
+    <div class="row">
+      <div class="col-lg-10 mx-auto news-board">
+        {{ board.content }}
+      </div>
+    </div>
+    {% endif %}
   </div>
 </section>
-<div class="container">
-  <div class="row">
-    {% assign news_posts = site.categories.news | sort: "date" | reverse %}
-    {% assign years = "" | split: "" %}
-    {% assign max_years = 3 %}
 
-    {% for post in news_posts %}
-      {% assign year = post.date | date: "%Y" %}
-      {% unless years contains year %}
-        {% assign years = years | push: year %}
-      {% endunless %}
-      {% if years.size > max_years %}
-        {% break %}
-      {% endif %}
-
-      <div class="col-md-6 col-lg-4 mb-4">
-        <a href="{{ post.url }}" class="card h-100 border-0 shadow-sm bg-light text-dark p-4 text-decoration-none">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <div>
-              <small class="text-muted d-block mb-2">
-                {{ post.date | date: "%b %e" }} ·
-                {{ post.content | number_of_words | divided_by:200 | ceil }} min read
-              </small>
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.summary | truncate: 120 }}</p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center mt-3 text-muted small">
-              <span><i class="fas fa-eye"></i> {{ post.views | default: 0 }}</span>
-              <span><i class="fas fa-comment"></i> {{ post.comments | default: 0 }}</span>
-              <span><i class="fas fa-heart"></i> {{ post.likes | default: 0 }}</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-
-  <div class="text-center mt-4">
-    <a class="btn btn-primary btn-xl text-uppercase" href="/posts.html">All Posts</a>
-  </div>
-</div>
+<style>
+  .news-board { font-size: 1rem; line-height: 1.7; }
+  .news-board h2 {
+    font-size: 1.4rem;
+    margin-top: 1.8rem;
+    padding-bottom: .3rem;
+    border-bottom: 2px solid #fed136;
+  }
+  .news-board ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+  .news-board li { padding: .4rem .2rem; border-bottom: 1px solid #eee; }
+  .news-board li:last-child { border-bottom: none; }
+  .news-board a { color: #0d6efd; text-decoration: none; }
+  .news-board a:hover { text-decoration: underline; }
+</style>
 {% endif %}
 {% include modals.html %}
