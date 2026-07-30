@@ -4,7 +4,13 @@
       "Bash(bundle exec jekyll build:*)",
       "Bash(python -c:*)",
       "Bash(chcp 65001)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(python3 -c ' *)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 -c ' *)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c \"print\\(1+1\\)\")",
+      "Bash(echo \"exit:$?\")",
+      "Bash(where python3 *)"
     ]
   }
 }
