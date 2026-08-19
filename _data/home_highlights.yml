@@ -1,0 +1,57 @@
+# ⚠️ 임시 데이터 (2026-08-18) ⚠️
+#
+# 메인 페이지 2분할 보드에 노출할 "최신 5건"입니다.
+# 지금은 News가 마크다운 한 덩어리(_posts/2026-07-21-awards.md), Publications가
+# 손으로 쓴 HTML(publications.html)이라 자동으로 최신 N건을 뽑을 수 없어
+# 이 파일에 직접 적어둡니다.
+#
+# 2단계에서 구글 시트 → _data/presentations.csv / _data/publications.csv 로
+# 전환하면 이 파일은 삭제하고, _includes/home_board.html이 CSV에서
+# `limit: 5`로 직접 뽑도록 바꿉니다. 그때까지는 원본 수정 시 여기도 같이 손봐야 합니다.
+
+news:
+  - title: "머신러닝을 이용한 온실 토마토 생산량 급변과 환경 요인 간의 관계 분석"
+    meta: "한국원예학회 · 우수포스터발표상"
+    date: "2026"
+    url: /news
+
+  - title: "기후변화에 따른 여름배추 및 가을배추의 정식 적합성 및 재배 변화 가능성 평가"
+    meta: "한국생물환경조절학회 · 우수포스터발표상"
+    date: "2026"
+    url: /news
+
+  - title: "기후변화에 따른 여름배추의 정식 적합성 및 재배 변화 가능성 평가"
+    meta: "한국농림기상학회 · 우수포스터발표상"
+    date: "2026"
+    url: /news
+
+  - title: "농업용 저수지 수위 및 다출처 데이터를 활용한 저수지 운영 인공지능 모델 개발"
+    meta: "KSAE AX-Water Challenge 2025 · 대상(농림축산식품부 장관상)"
+    date: "2025"
+    url: /news/ksae-ax-water-2025/
+
+  - title: "전국단위 농경지 양분 유출 모의를 위한 APEX 기반 머신러닝 메타모델 개발"
+    meta: "한국토양비료학회 · 최우수포스터상"
+    date: "2025"
+    url: /news
+
+publications:
+  - title: "작물 이미지 객체 분할 학습데이터 구축을 위한 Segmentation Anything Model 3 기반 텍스트 유도형 어노테이션 시스템 개발"
+    meta: "생물환경조절학회지, 35(1), 26-39"
+    date: "2026"
+
+  - title: "위성영상을 활용한 국외 곡물 작황 모니터링 웹 기반 시스템 설계 및 구축"
+    meta: "한국농공학회논문집, 68(1), 29"
+    date: "2026"
+
+  - title: "Implementing dynamic distance-time conversion factors through real-time traffic data for enhancing urban mobility and service accessibility in South Korea"
+    meta: "PLoS One"
+    date: "2025"
+
+  - title: "Post-harvest treatment of wild-simulated ginseng under climate-smart environmental conditions"
+    meta: "PLoS One"
+    date: "2025"
+
+  - title: "Reliability Analysis of a Single-span Agricultural Greenhouse Considering the Uncertainty of the Foundation Joint Conditions"
+    meta: "Horticultural Science & Technology"
+    date: "2025"

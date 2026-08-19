@@ -15,9 +15,11 @@ en: &DEFAULT_EN
     text: Welcome to our SDA!
     section: home
 
-    fields_title: "Our Focus Areas"
-    fields_text: "Explore six research and application areas of SDA."
-    fields_section: "focus"
+  # Research 페이지 본문 (2026-08-18: 메인 페이지 하단에 있던 Focus Areas를 이곳으로 이동)
+  research:
+    title: "Our Focus Areas"
+    text: "Explore six research and application areas of SDA."
+    section: "research"
     fields:
       - title: "Digital Agriculture"
         desc: "Advancing agricultural production and management through sensor technologies, IoT, and data-driven analytics."

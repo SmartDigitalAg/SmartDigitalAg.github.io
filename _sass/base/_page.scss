@@ -100,6 +100,103 @@ h6 {
     .focus-card-img{ height: 240px; }
   }
 
+// Home: two-column latest board (News / Publications)
+.home-board {
+  padding: 80px 0;
+
+  // 홈은 masthead가 먼저 오므로 .page-section:first-of-type 의
+  // 네거티브 마진 보정(고정 nav용)이 필요 없다.
+  &.page-section:first-of-type {
+    margin-top: 0;
+    padding-top: 80px;
+  }
+
+  .board-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 2px solid $primary;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .board-title {
+    font-size: 1.6rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .board-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .board-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .board-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.9rem 0.2rem;
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .board-link {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-right: 1rem;
+    color: $black;
+    text-decoration: none;
+    &:hover .board-item-title {
+      color: $primary;
+    }
+  }
+
+  // 제목은 두 줄까지만 노출
+  .board-item-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .board-item-meta {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+
+  .board-item-date {
+    flex: 0 0 auto;
+    font-size: 0.85rem;
+    color: #adb5bd;
+    padding-top: 0.15rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .home-board {
+    padding: 60px 0;
+    &.page-section:first-of-type {
+      padding-top: 60px;
+    }
+  }
+}
+
 // Ensure links page card titles match header field card titles
 .links-card .card-title {
   color: $black;
