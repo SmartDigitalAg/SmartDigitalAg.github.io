@@ -15,6 +15,15 @@
   .navbar-brand {
     color: $primary;
     @include script-font;
+
+    // 로고가 흰 배경 전용(짙은 남색 + 초록, 배경 투명)이라 어두운/복잡한
+    // 슬라이드쇼 사진 위에서 묻힌다. 로고 뒤에만 흰 판을 깔아 대비를 확보한다.
+    // 상단바 배경은 건드리지 않으므로 .navbar-shrink 페이드아웃은 그대로 유지되고,
+    // 흰 판도 같은 엘리먼트라 로고와 함께 자연스럽게 사라진다.
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    padding: 6px 18px;
+
     &.active,
     &:active,
     &:focus,
