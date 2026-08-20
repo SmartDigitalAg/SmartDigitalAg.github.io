@@ -11,7 +11,12 @@
 {% assign pres   = site.data.presentations %}
 {% assign manual = site.data.awards_manual %}
 
-{% capture years_raw %}{% for r in pres %}{% if r["비고"] != "" and r["주저자"] != "-" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
+{% comment %}
+  주의: Ruby CSV는 따옴표 없는 빈 칸(`,,`)을 nil로 읽는다. Liquid에서 nil != "" 는
+  참이므로 `!= ""`로만 검사하면 빈 칸이 필터를 통과해버린다. 반드시 strip을 거쳐
+  문자열로 정규화한 뒤 비교할 것.
+{% endcomment %}
+{% capture years_raw %}{% for r in pres %}{% assign bigo = r["비고"] | strip %}{% assign lead = r["주저자"] | strip %}{% if bigo != "" and lead != "-" and lead != "" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
 {% assign years = years_raw | split: " " | uniq | sort | reverse %}
 
 <div class="news-board">
@@ -19,7 +24,7 @@
   <h2>{{ y }}</h2>
   <ul>
 {% comment %} ── 시트에서 온 학술발표 수상 ── {% endcomment %}
-{% for r in pres %}{% if r["연도"] == y and r["비고"] != "" and r["주저자"] != "-" %}
+{% for r in pres %}{% assign bigo = r["비고"] | strip %}{% assign lead = r["주저자"] | strip %}{% if r["연도"] == y and bigo != "" and lead != "-" and lead != "" %}
 {%- assign v = r["학회"] | strip -%}
 {%- assign override = nil -%}
 {%- if site.data.venues -%}{%- assign override = site.data.venues[v] -%}{%- endif -%}
@@ -36,10 +41,10 @@
 {%- if t == "-" or t == "" -%}{%- assign t = r["영문 제목"] | strip -%}{%- endif -%}
 {%- assign l1 = r["뉴스 기사1"] | strip -%}
 {%- assign l2 = r["뉴스 기사2"] | strip -%}
-    <li>{{ r["주저자"] }}, {% if t != "" %}&ldquo;{{ t }}&rdquo;, {% endif %}{{ venue }}, <strong>{{ r["비고"] }}</strong>{% if l1 != "" and l2 != "" %} <a href="{{ l1 }}">기사1 &rarr;</a> <a href="{{ l2 }}">기사2 &rarr;</a>{% elsif l1 != "" %} <a href="{{ l1 }}">기사 &rarr;</a>{% elsif l2 != "" %} <a href="{{ l2 }}">기사 &rarr;</a>{% endif %}</li>
+    <li>{{ lead }}, {% if t != "" and t != "-" %}&ldquo;{{ t }}&rdquo;, {% endif %}{{ venue }}, <strong>{{ bigo }}</strong>{% if l1 != "" and l2 != "" %} <a href="{{ l1 }}">기사1 &rarr;</a> <a href="{{ l2 }}">기사2 &rarr;</a>{% elsif l1 != "" %} <a href="{{ l1 }}">기사 &rarr;</a>{% elsif l2 != "" %} <a href="{{ l2 }}">기사 &rarr;</a>{% endif %}</li>
 {%- comment -%} 처음 보는/의심스러운 값 경고 (빌드 산출물에서 grep 가능) {%- endcomment -%}
-{%- unless r["비고"] contains "상" or r["비고"] contains "Award" or r["비고"] contains "award" -%}
-    <!-- WARN 수상으로 보이지 않는 비고: {{ y }} / {{ r["주저자"] }} / {{ r["비고"] }} -->
+{%- unless bigo contains "상" or bigo contains "Award" or bigo contains "award" -%}
+    <!-- WARN 수상으로 보이지 않는 비고: {{ y }} / {{ lead }} / {{ bigo }} -->
 {%- endunless -%}
 {% endif %}{% endfor %}
 {% comment %} ── 수동 관리 항목 ── {% endcomment %}
@@ -52,7 +57,7 @@
 
 {% comment %} 처음 보는 학회 경고: venues.yml에도 없고 규칙으로 바꾼 결과가 기존과 다를 수 있는 경우 {% endcomment %}
 {%- capture seen_venues -%}|한국농공학회|한국생물환경조절학회|한국원예학회|한국농림기상학회|한국토양비료학회|한국적정기술학회|한국작물학회|한국농촌계획학회|GreenSys|icRS|PAWEES|CIGR|AGU|jpGU|{%- endcapture -%}
-{%- for r in pres -%}{%- if r["비고"] != "" and r["주저자"] != "-" -%}
+{%- for r in pres -%}{%- assign bigo = r["비고"] | strip -%}{%- assign lead = r["주저자"] | strip -%}{%- if bigo != "" and lead != "-" and lead != "" -%}
 {%- assign v = r["학회"] | strip -%}
 {%- assign head2 = v | slice: 0, 2 -%}{%- assign lo = v | downcase -%}{%- assign up = v | upcase -%}
 {%- if head2 == "한국" -%}{%- assign venue = v -%}{%- elsif lo == up -%}{%- assign venue = "한국" | append: v -%}{%- else -%}{%- assign venue = v -%}{%- endif -%}

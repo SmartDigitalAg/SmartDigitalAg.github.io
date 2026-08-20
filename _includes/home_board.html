@@ -6,7 +6,11 @@
 {% endcomment %}
 {% assign pres   = site.data.presentations %}
 {% assign manual = site.data.awards_manual %}
-{% capture years_raw %}{% for r in pres %}{% if r["비고"] != "" and r["주저자"] != "-" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
+{% comment %}
+  Ruby CSV는 따옴표 없는 빈 칸(`,,`)을 nil로 읽고 Liquid에서 nil != "" 는 참이므로,
+  반드시 strip으로 문자열 정규화한 뒤 비교한다. (news_awards.html과 동일 규칙)
+{% endcomment %}
+{% capture years_raw %}{% for r in pres %}{% assign bigo = r["비고"] | strip %}{% assign lead = r["주저자"] | strip %}{% if bigo != "" and lead != "-" and lead != "" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
 {% assign years = years_raw | split: " " | uniq | sort | reverse %}
 {% assign papers = site.data.publications | sort: "year" | reverse %}
 
@@ -23,7 +27,7 @@
         <ul class="board-list">
 {%- assign shown = 0 -%}
 {%- for y in years -%}
-{%- for r in pres -%}{%- if shown < 5 and r["연도"] == y and r["비고"] != "" and r["주저자"] != "-" -%}
+{%- for r in pres -%}{%- assign bigo = r["비고"] | strip -%}{%- assign lead = r["주저자"] | strip -%}{%- if shown < 5 and r["연도"] == y and bigo != "" and lead != "-" and lead != "" -%}
 {%- assign v = r["학회"] | strip -%}
 {%- assign override = nil -%}
 {%- if site.data.venues -%}{%- assign override = site.data.venues[v] -%}{%- endif -%}
@@ -39,7 +43,7 @@
           <li class="board-item">
             <a class="board-link" href="{{ '/news' | relative_url }}">
               <span class="board-item-title">{{ t }}</span>
-              <span class="board-item-meta">{{ venue }} &middot; {{ r["비고"] }}</span>
+              <span class="board-item-meta">{{ venue }} &middot; {{ bigo }}</span>
             </a>
             <span class="board-item-date">{{ y }}</span>
           </li>
