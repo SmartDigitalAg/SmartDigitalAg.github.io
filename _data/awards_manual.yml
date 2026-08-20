@@ -1,0 +1,72 @@
+# 수동 관리 수상 목록
+#
+# 학술발표(포스터/구두) 수상은 _data/presentations.csv(구글 시트 '학술발표목록')에서
+# 자동으로 뽑히므로 여기에 적지 않는다. 이 파일에는 시트가 다루지 않는 것만 둔다:
+#   - 경진대회 / 창업대회 수상
+#   - 교수 개인 수상
+#   - 학술발표지만 시트에 넣지 않기로 한 건 (2026-08-19 결정)
+#
+# 필드
+#   year   : 연도 (문자열)
+#   who    : 수상자. 여러 명이면 가운뎃점(·)으로 연결
+#   title  : 발표/과제 제목. 없으면 생략 (교수 개인상 등)
+#   venue  : 학회 / 대회명
+#   award  : 상 이름
+#   detail : 자세히 보기 링크 (사이트 내부 페이지)
+#   links  : 언론 기사 URL 목록
+
+- year: "2025"
+  who: 정재영·석승원·장은수
+  title: 농업용 저수지 수위 및 다출처 데이터를 활용한 저수지 운영 인공지능 모델 개발
+  venue: KSAE AX-Water Challenge 2025
+  award: 대상(농림축산식품부 장관상)
+  detail: /news/ksae-ax-water-2025/
+
+- year: "2025"
+  who: 석승원
+  title: 케일의 일단위 엽팽창 속도 및 동화산물 추정 모형 개발
+  venue: 한국원예학회(제121차)
+  award: 우수포스터발표상
+  links:
+    - https://www.pressian.com/pages/articles/2025073115085560485
+    - https://www.jjn.co.kr/news/articleView.html?idxno=1013357
+
+- year: "2025"
+  who: 전혜진·정재영·석승원·김미소·김하종·장은수
+  title: 농업 통계 및 예측 모델을 이용한 시군구 단위 지도화 플랫폼 개발
+  venue: 제4회 농공창의아이디어 경진대회
+  award: 우수상
+  links:
+    - https://www.viva100.com/article/20251230500690
+    - http://www.veritas-a.com/news/articleView.html?idxno=592172
+
+- year: "2025"
+  who: 김동현
+  title: Improving wheat yield and water use efficiency through soil water-guided furrow irrigation and hydraulic simulation
+  venue: 2025 PAWEES International Conference
+  award: Young Professional Award
+  links:
+    - https://www.jjn.co.kr/news/articleView.html?idxno=1024003
+
+- year: "2024"
+  who: 김태곤
+  venue: 한국농공학회
+  award: 젊은 과학자상
+  links:
+    - https://www.jeonmin.co.kr/news/articleView.html?idxno=408861
+    - http://www.mjeonbuk.com/news/articleView.html?idxno=95538
+
+- year: "2024"
+  who: 전혜진·양희원·김하종(Green Pixel팀)
+  venue: 제1회 호남권 창업 아이디어 경진대회
+  award: 대상
+  links:
+    - https://news.unn.net/news/articleView.html?idxno=570539
+
+- year: "2023"
+  who: 김솔희
+  title: 노지 스마트팜 도입에 따른 과채류 생산단계 탄소배출량 평가
+  venue: 한국농공학회
+  award: 우수상
+  links:
+    - https://www.todayan.com/news/articleView.html?idxno=517352

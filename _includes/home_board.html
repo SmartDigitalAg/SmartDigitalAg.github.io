@@ -1,5 +1,15 @@
 <!-- Home: two-column latest board (News / Publications) -->
-{% assign hl = site.data.home_highlights %}
+{% comment %}
+  2026-08-20: 임시 _data/home_highlights.yml을 걷어내고 실제 데이터에서 직접 뽑는다.
+  News  = _data/presentations.csv(시트) 수상 + _data/awards_manual.yml 병합 후 최신 5건
+  Papers = _data/publications.csv 최신 5건
+{% endcomment %}
+{% assign pres   = site.data.presentations %}
+{% assign manual = site.data.awards_manual %}
+{% capture years_raw %}{% for r in pres %}{% if r["비고"] != "" and r["주저자"] != "-" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
+{% assign years = years_raw | split: " " | uniq | sort | reverse %}
+{% assign papers = site.data.publications | sort: "year" | reverse %}
+
 <section class="page-section home-board" id="board">
   <div class="container">
     <div class="row">
@@ -11,15 +21,41 @@
           <a class="board-more" href="{{ '/news' | relative_url }}">전체 보기 <span aria-hidden="true">&rarr;</span></a>
         </div>
         <ul class="board-list">
-          {% for item in hl.news limit: 5 %}
+{%- assign shown = 0 -%}
+{%- for y in years -%}
+{%- for r in pres -%}{%- if shown < 5 and r["연도"] == y and r["비고"] != "" and r["주저자"] != "-" -%}
+{%- assign v = r["학회"] | strip -%}
+{%- assign override = nil -%}
+{%- if site.data.venues -%}{%- assign override = site.data.venues[v] -%}{%- endif -%}
+{%- if override -%}{%- assign venue = override -%}
+{%- else -%}
+  {%- assign head2 = v | slice: 0, 2 -%}{%- assign lo = v | downcase -%}{%- assign up = v | upcase -%}
+  {%- if head2 == "한국" -%}{%- assign venue = v -%}
+  {%- elsif lo == up -%}{%- assign venue = "한국" | append: v -%}
+  {%- else -%}{%- assign venue = v -%}{%- endif -%}
+{%- endif -%}
+{%- assign t = r["국문 제목"] | strip -%}
+{%- if t == "-" or t == "" -%}{%- assign t = r["영문 제목"] | strip -%}{%- endif -%}
           <li class="board-item">
-            <a class="board-link" href="{{ item.url | default: '/news' | relative_url }}">
-              <span class="board-item-title">{{ item.title }}</span>
-              <span class="board-item-meta">{{ item.meta }}</span>
+            <a class="board-link" href="{{ '/news' | relative_url }}">
+              <span class="board-item-title">{{ t }}</span>
+              <span class="board-item-meta">{{ venue }} &middot; {{ r["비고"] }}</span>
             </a>
-            <span class="board-item-date">{{ item.date }}</span>
+            <span class="board-item-date">{{ y }}</span>
           </li>
-          {% endfor %}
+{%- assign shown = shown | plus: 1 -%}
+{%- endif -%}{%- endfor -%}
+{%- for m in manual -%}{%- if shown < 5 and m.year == y -%}
+          <li class="board-item">
+            <a class="board-link" href="{{ m.detail | default: '/news' | relative_url }}">
+              <span class="board-item-title">{{ m.title | default: m.award }}</span>
+              <span class="board-item-meta">{{ m.venue }} &middot; {{ m.award }}</span>
+            </a>
+            <span class="board-item-date">{{ m.year }}</span>
+          </li>
+{%- assign shown = shown | plus: 1 -%}
+{%- endif -%}{%- endfor -%}
+{%- endfor %}
         </ul>
       </div>
 
@@ -30,13 +66,13 @@
           <a class="board-more" href="{{ '/publications' | relative_url }}">전체 보기 <span aria-hidden="true">&rarr;</span></a>
         </div>
         <ul class="board-list">
-          {% for item in hl.publications limit: 5 %}
+          {% for p in papers limit: 5 %}
           <li class="board-item">
             <a class="board-link" href="{{ '/publications' | relative_url }}">
-              <span class="board-item-title">{{ item.title }}</span>
-              <span class="board-item-meta">{{ item.meta }}</span>
+              <span class="board-item-title">{{ p.title }}</span>
+              <span class="board-item-meta">{{ p.journal }}{% assign vol = p.volume | strip %}{% if vol != "" %}, {{ vol }}{% endif %}</span>
             </a>
-            <span class="board-item-date">{{ item.date }}</span>
+            <span class="board-item-date">{{ p.year }}</span>
           </li>
           {% endfor %}
         </ul>

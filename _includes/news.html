@@ -1,4 +1,9 @@
-<!-- News: inline year-grouped awards board -->
+<!-- News: 구글 시트(_data/presentations.csv) + 수동(_data/awards_manual.yml) 기반 수상 목록 -->
+{% comment %}
+  2026-08-20: 종전에는 news_board: true 포스트의 마크다운을 통째로 렌더했으나,
+  학술발표 수상을 시트에서 자동으로 끌어오도록 전환했다.
+  실제 목록 생성은 _includes/news_awards.html이 담당한다.
+{% endcomment %}
 {% if site.locale and site.locale != "" and site.locale != nil %}
 <section class="page-section" id="{{ site.data.sitetext.portfolio.section | default: "news" }}">
   <div class="container">
@@ -11,30 +16,12 @@
       </div>
     </div>
 
-    {% assign board = site.posts | where_exp: "p", "p.news_board" | first %}
-    {% if board %}
     <div class="row">
-      <div class="col-lg-10 mx-auto news-board">
-        {{ board.content }}
+      <div class="col-lg-10 mx-auto">
+        {% include news_awards.html %}
       </div>
     </div>
-    {% endif %}
   </div>
 </section>
-
-<style>
-  .news-board { font-size: 1rem; line-height: 1.7; }
-  .news-board h2 {
-    font-size: 1.4rem;
-    margin-top: 1.8rem;
-    padding-bottom: .3rem;
-    border-bottom: 2px solid #fed136;
-  }
-  .news-board ul { list-style: none; padding-left: 0; margin-bottom: 0; }
-  .news-board li { padding: .4rem .2rem; border-bottom: 1px solid #eee; }
-  .news-board li:last-child { border-bottom: none; }
-  .news-board a { color: #0d6efd; text-decoration: none; }
-  .news-board a:hover { text-decoration: underline; }
-</style>
 {% endif %}
 {% include modals.html %}

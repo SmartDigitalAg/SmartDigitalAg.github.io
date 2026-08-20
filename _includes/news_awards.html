@@ -1,0 +1,78 @@
+<!-- News 수상 목록: 구글 시트(_data/presentations.csv) + 수동(_data/awards_manual.yml) 병합 -->
+{% comment %}
+  시트 수상 판정: '비고'가 비어있지 않고 '주저자'가 '-'가 아닌 행.
+  ('학회참가' 행이 유일한 비수상 값이며 그 행만 주저자가 '-'라 자동으로 걸러진다.)
+
+  학회명: 시트는 약칭이라 정식명칭으로 바꾼다. Liquid에 정규식이 없으므로
+  "downcase와 upcase가 같으면 ASCII 알파벳이 없다 = 한글 학회명"이라는 성질을 쓴다.
+  _data/venues.yml에 항목이 있으면 그 값이 우선한다.
+{% endcomment %}
+
+{% assign pres   = site.data.presentations %}
+{% assign manual = site.data.awards_manual %}
+
+{% capture years_raw %}{% for r in pres %}{% if r["비고"] != "" and r["주저자"] != "-" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
+{% assign years = years_raw | split: " " | uniq | sort | reverse %}
+
+<div class="news-board">
+{% for y in years %}
+  <h2>{{ y }}</h2>
+  <ul>
+{% comment %} ── 시트에서 온 학술발표 수상 ── {% endcomment %}
+{% for r in pres %}{% if r["연도"] == y and r["비고"] != "" and r["주저자"] != "-" %}
+{%- assign v = r["학회"] | strip -%}
+{%- assign override = nil -%}
+{%- if site.data.venues -%}{%- assign override = site.data.venues[v] -%}{%- endif -%}
+{%- if override -%}
+  {%- assign venue = override -%}
+{%- else -%}
+  {%- assign head2 = v | slice: 0, 2 -%}
+  {%- assign lo = v | downcase -%}{%- assign up = v | upcase -%}
+  {%- if head2 == "한국" -%}{%- assign venue = v -%}
+  {%- elsif lo == up -%}{%- assign venue = "한국" | append: v -%}
+  {%- else -%}{%- assign venue = v -%}{%- endif -%}
+{%- endif -%}
+{%- assign t = r["국문 제목"] | strip -%}
+{%- if t == "-" or t == "" -%}{%- assign t = r["영문 제목"] | strip -%}{%- endif -%}
+{%- assign l1 = r["뉴스 기사1"] | strip -%}
+{%- assign l2 = r["뉴스 기사2"] | strip -%}
+    <li>{{ r["주저자"] }}, {% if t != "" %}&ldquo;{{ t }}&rdquo;, {% endif %}{{ venue }}, <strong>{{ r["비고"] }}</strong>{% if l1 != "" and l2 != "" %} <a href="{{ l1 }}">기사1 &rarr;</a> <a href="{{ l2 }}">기사2 &rarr;</a>{% elsif l1 != "" %} <a href="{{ l1 }}">기사 &rarr;</a>{% elsif l2 != "" %} <a href="{{ l2 }}">기사 &rarr;</a>{% endif %}</li>
+{%- comment -%} 처음 보는/의심스러운 값 경고 (빌드 산출물에서 grep 가능) {%- endcomment -%}
+{%- unless r["비고"] contains "상" or r["비고"] contains "Award" or r["비고"] contains "award" -%}
+    <!-- WARN 수상으로 보이지 않는 비고: {{ y }} / {{ r["주저자"] }} / {{ r["비고"] }} -->
+{%- endunless -%}
+{% endif %}{% endfor %}
+{% comment %} ── 수동 관리 항목 ── {% endcomment %}
+{% for m in manual %}{% if m.year == y %}
+    <li>{{ m.who }}, {% if m.title %}&ldquo;{{ m.title }}&rdquo;, {% endif %}{{ m.venue }}, <strong>{{ m.award }}</strong>{% if m.detail %} <a href="{{ m.detail | relative_url }}">자세히 &rarr;</a>{% endif %}{% if m.links %}{% if m.links.size > 1 %}{% for u in m.links %} <a href="{{ u }}">기사{{ forloop.index }} &rarr;</a>{% endfor %}{% else %} <a href="{{ m.links[0] }}">기사 &rarr;</a>{% endif %}{% endif %}</li>
+{% endif %}{% endfor %}
+  </ul>
+{% endfor %}
+</div>
+
+{% comment %} 처음 보는 학회 경고: venues.yml에도 없고 규칙으로 바꾼 결과가 기존과 다를 수 있는 경우 {% endcomment %}
+{%- capture seen_venues -%}|한국농공학회|한국생물환경조절학회|한국원예학회|한국농림기상학회|한국토양비료학회|한국적정기술학회|한국작물학회|한국농촌계획학회|GreenSys|icRS|PAWEES|CIGR|AGU|jpGU|{%- endcapture -%}
+{%- for r in pres -%}{%- if r["비고"] != "" and r["주저자"] != "-" -%}
+{%- assign v = r["학회"] | strip -%}
+{%- assign head2 = v | slice: 0, 2 -%}{%- assign lo = v | downcase -%}{%- assign up = v | upcase -%}
+{%- if head2 == "한국" -%}{%- assign venue = v -%}{%- elsif lo == up -%}{%- assign venue = "한국" | append: v -%}{%- else -%}{%- assign venue = v -%}{%- endif -%}
+{%- capture vkey -%}|{{ venue }}|{%- endcapture -%}
+{%- unless seen_venues contains vkey -%}
+<!-- WARN 처음 보는 학회: "{{ v }}" -> "{{ venue }}" (확인 후 _data/venues.yml 또는 이 목록에 반영) -->
+{%- endunless -%}
+{%- endif -%}{%- endfor -%}
+
+<style>
+  .news-board { font-size: 1rem; line-height: 1.7; }
+  .news-board h2 {
+    font-size: 1.4rem;
+    margin-top: 1.8rem;
+    padding-bottom: .3rem;
+    border-bottom: 2px solid #fed136;
+  }
+  .news-board ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+  .news-board li { padding: .4rem .2rem; border-bottom: 1px solid #eee; }
+  .news-board li:last-child { border-bottom: none; }
+  .news-board a { color: #0d6efd; text-decoration: none; }
+  .news-board a:hover { text-decoration: underline; }
+</style>

@@ -1,0 +1,114 @@
+name: Sync Google Sheets
+
+# 구글 시트를 CSV로 받아 _data/ 에 반영한다.
+# 시트는 "링크가 있는 모든 사용자에게 보기 권한"이어야 하며, API 키는 필요 없다.
+#
+# 검증에서 걸리면 커밋하지 않는다. 그 경우 사이트는 직전 CSV로 계속 동작한다.
+
+on:
+  schedule:
+    # 매일 00:20 UTC = 한국시간 09:20
+    - cron: '20 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-sheets
+  cancel-in-progress: false
+
+env:
+  SHEET_ID: 1ACLVJ368WL_rCHME4QSjUWlzEWsfSFPV0ayyamyYcU8
+  SHEET_TAB: 학술발표목록
+  TARGET: _data/presentations.csv
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 시트를 CSV로 내려받기
+        run: |
+          set -euo pipefail
+          TAB_ENC=$(python3 -c "import urllib.parse,os;print(urllib.parse.quote(os.environ['SHEET_TAB']))")
+          URL="https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${TAB_ENC}"
+          echo "GET $URL"
+          curl -sSL --fail --retry 3 --retry-delay 5 -o /tmp/fetched.csv "$URL"
+          echo "받은 크기: $(wc -c < /tmp/fetched.csv) bytes"
+
+      - name: 검증 후 반영
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv, os, sys, io
+
+          TARGET = os.environ["TARGET"]
+          EXPECTED = ["연도","시즌","국내외","학회","장소","구분","주저자","공동 저자",
+                      "초록 제출","학회 기간","발표일시","발표형식","국문 제목","영문 제목",
+                      "내용","사사","연구비","비고","초록","자료","뉴스 기사1","뉴스 기사2"]
+
+          with open("/tmp/fetched.csv", encoding="utf-8-sig", newline="") as f:
+              rows = list(csv.reader(f))
+          if not rows:
+              sys.exit("실패: 받은 CSV가 비어 있음")
+
+          header = [h.strip() for h in rows[0]]
+          # 시트 우측의 빈 열은 잘라낸다
+          keep = [i for i, h in enumerate(header) if h]
+          header = [header[i] for i in keep]
+
+          missing = [c for c in EXPECTED if c not in header]
+          if missing:
+              sys.exit(f"실패: 필수 컬럼 누락 {missing}\n받은 헤더: {header}")
+
+          body = []
+          for r in rows[1:]:
+              vals = [(r[i].strip() if i < len(r) else "") for i in keep]
+              if any(vals):
+                  body.append(vals)
+
+          if not body:
+              sys.exit("실패: 데이터 행이 0건")
+
+          # 필수값 검사
+          yi, ji, hi = header.index("연도"), header.index("주저자"), header.index("학회")
+          bad = [n for n, v in enumerate(body, start=2)
+                 if not v[yi].isdigit() or len(v[yi]) != 4 or not v[ji] or not v[hi]]
+          if bad:
+              sys.exit(f"실패: 연도/주저자/학회가 비정상인 행 {bad[:10]}")
+
+          # 행 수 급감 방지 (시트 사고 감지)
+          if os.path.exists(TARGET):
+              with open(TARGET, encoding="utf-8", newline="") as f:
+                  prev = len(list(csv.reader(f))) - 1
+              if prev > 0 and len(body) < prev * 0.5:
+                  sys.exit(f"실패: 행 수가 급감했습니다 ({prev} -> {len(body)}). "
+                           "의도한 변경이면 수동으로 커밋하세요.")
+
+          buf = io.StringIO()
+          w = csv.writer(buf, lineterminator="\n")
+          w.writerow(header)
+          w.writerows(body)
+          with open(TARGET, "w", encoding="utf-8", newline="") as f:
+              f.write(buf.getvalue())
+
+          awards = sum(1 for v in body if v[header.index("비고")] and v[ji] != "-")
+          print(f"검증 통과: {len(body)}행, 수상 {awards}건")
+          PY
+
+      - name: 변경 있으면 커밋
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- "$TARGET"; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET"
+          git commit -m "chore(data): 학술발표목록 시트 동기화
+
+          구글 시트에서 자동으로 받아온 변경입니다."
+          git push
