@@ -1,0 +1,76 @@
+<!-- Publications: _data/publications.csv 기반 렌더러 -->
+{% comment %}
+  연구실 구성원 볼드는 team.people의 name(영문) / kor_name(한글)을 기준으로 판정한다.
+  kor_name에는 "김태곤 교수", "김솔희 박사"처럼 직함이 붙고 name에는 "Dr. " 접두가 붙으므로
+  파이프로 감싼 조회용 문자열을 만들 때 함께 걷어낸다.
+{% endcomment %}
+{% if site.locale and site.locale != "" and site.locale != nil %}
+  {% assign teamdata = site.data.sitetext[site.locale].team %}
+{% else %}
+  {% assign teamdata = site.data.sitetext.team %}
+{% endif %}
+
+{% capture members %}{% for m in teamdata.people %}{% assign en = m.name | remove: "Dr. " | strip %}{% assign ko = m.kor_name | remove: " 교수" | remove: " 박사" | strip %}|{{ en }}|{{ ko }}{% endfor %}|{% endcapture %}
+
+{% assign groups = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+
+<section class="page-section" id="publications">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Publications</h2>
+        <h3 class="section-subheading text-muted">Research Publications from SDA Lab</h3>
+      </div>
+    </div>
+{% for g in groups %}
+    <!-- {{ g.name }} -->
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <h3 class="text-uppercase mb-4">{{ g.name }}</h3>
+        <ul class="publication-list">
+{% for p in g.items %}          <li class="publication-item">
+            <strong>{{ p.title }}</strong><br>
+            <span class="authors">{% assign authors = p.authors | split: ", " %}{% for a in authors %}{% capture key %}|{{ a }}|{% endcapture %}{% if members contains key %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</span><br>
+            <span class="journal"><em>{{ p.journal }}</em>{% assign vol = p.volume | strip %}{% assign pg = p.pages | strip %}{% if vol != "" %}, {{ vol }}{% endif %}{% if pg != "" %}, {{ pg }}{% endif %}, {{ p.year }}</span>
+          </li>
+{% endfor %}        </ul>
+      </div>
+    </div>
+{% endfor %}
+  </div>
+</section>
+
+<style>
+.publication-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.publication-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-left: 3px solid #fed136;
+  background-color: #f8f9fa;
+}
+
+.publication-item strong {
+  font-size: 1.1em;
+  color: #212529;
+}
+
+.publication-item .authors {
+  color: #6c757d;
+  font-size: 0.95em;
+}
+
+.publication-item .authors strong {
+  font-size: inherit;
+  color: inherit;
+  font-weight: 700;
+}
+
+.publication-item .journal {
+  color: #495057;
+  font-size: 0.9em;
+}
+</style>

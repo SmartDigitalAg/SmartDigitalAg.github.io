@@ -1,0 +1,31 @@
+year,title,authors,journal,volume,pages,lang
+2026,작물 이미지 객체 분할 학습데이터 구축을 위한 Segmentation Anything Model 3 기반 텍스트 유도형 어노테이션 시스템 개발,"석승원, 박혜성, 김솔희, 이영미, 김태곤",생물환경조절학회지,35(1),26-39,ko
+2026,위성영상을 활용한 국외 곡물 작황 모니터링 웹 기반 시스템 설계 및 구축,"정재영, 김솔희, 권령섭, 유웨이궈, 탕펑페이, 이경도, 김태곤",한국농공학회논문집,68(1),29,ko
+2025,Implementing dynamic distance-time conversion factors through real-time traffic data for enhancing urban mobility and service accessibility in South Korea,"Solhee Kim, Taegon Kim, Jeongbae Jeon",PLoS One,"","",en
+2025,Post-harvest treatment of wild-simulated ginseng under climate-smart environmental conditions,"Solhee Kim, Taegon Kim, Jungyeon Kim, Kyo Suh",PLoS One,"","",en
+2025,Reliability Analysis of a Single-span Agricultural Greenhouse Considering the Uncertainty of the Foundation Joint Conditions,"Jeongbae Jeon, Sangik Lee, Solhee Kim, Taegon Kim",Horticultural Science & Technology,"","",en
+2025,Physics-Informed Neural Networks for Predicting Internal Forces and Deformations of Structural Frames in a Single-Span Agricultural Greenhouse,"Solhee Kim, Taegon Kim, Jeongbae Jeon",Horticultural Science & Technology,"","",en
+2025,Optimal Prioritization Model for School Closure Decisions Considering Educational Accessibility in Shrinking Regions,"Solhee Kim, Jeongbae Jeon, Taegon Kim",Sustainability,17(9),4057,en
+2025,Multivariate Drought Characteristics and Joint Probability Analysis Under Climate Change: A Comparative Index-Based Study in Korea,"Sayed Shah Jan Sadiqi, Eun-Mi Hong, Won-Ho Nam, Taegon Kim",Hydrological Processes,"","",en
+2025,Structural Safety Changes and Reinforcement Effect of Raising the Height of Korean Plastic Greenhouses,"Jeongbae Jeon, Solhee Kim, Taegon Kim",Horticultural Science & Technology,"","",en
+2025,국토위성영상을 이용한 YOLO-Seg 기반의 농경지 추출 모델 개발,"김솔희, 전정배, 석승원, 정재영, 김태곤",한국농공학회논문집,"","",ko
+2025,뉴스 빅데이터 기반 자연재해 전조 감지 분석,"김민진, 남원호, 양미혜, 이지완, 김태곤, 도종원, 유규석, 김성준",한국농공학회논문집,58(4),345-358,ko
+2025,국산 밀 품종의 APSIM 생물계절 매개변수 최적화 및 생육 단계 모의,"석승원, 김솔희, 김태곤",한국농공학회논문집,"","",ko
+2025,국제 사례 비교를 통한 한국형 위성영상 기반 작황 모니터링 시스템 설계 방안,"정재영, 김솔희, 이경도, 김태곤",농촌계획,"","",ko
+2025,다중출처 데이터와 작물모형을 활용한 지역 단위 작황 현황 자동 보고 서비스 개발,"김솔희, 정재영, 석승원, 김태곤",생물환경조절학회지,"","",ko
+2025,물리정보 신경망 (PINN)을 활용한 외팔보의 1D 및 2D 구조해석 기법 비교 연구,"전정배, 김솔희, 김태곤, 윤성수",한국농공학회논문집,67(6),1,ko
+2025,Performance Evaluation of APSIM and DSSAT Models for Simulating Buckwheat Growth and Yield (Fagopyrum esculentum Moench),"Stephen Okwang, Hyunsu Park, Jeongwoo Son, Taegon Kim, Jin-Hyeob Kwak, Taeil Jang",한국농공학회논문집,67(6),137-150,en
+2025,국가단위 기후변화 영향·취약성 평가를 위한 대리모델 기반 체계 구축 및 농업 부문 적용사례 연구,"최순군, 김태곤, 이준혁, 양예린, 전상민, 엽소진, 이종문, 이병모, 나영은",한국기후변화학회지,16(5-2),1061-1079,ko
+2024,과정기반 작물모형을 이용한 웹 기반 밀 재배관리 의사결정 지원시스템 설계 및 구축,"김솔희, 석승원, 청리광, 장태일, 김태곤",한국농공학회논문집,"","",ko
+2023,Energy and environmental performance of a passenger drone for an urban air mobility (UAM) policy with 3D spatial information in Seoul,"Solhee Kim, Taegon Kim, Kyo Suh, Jeongbae Jeon",Journal of Cleaner Production,398,136425,en
+2023,A scalable framework for quantifying field-level agricultural carbon outcomes,"Kaiyu Guan, Zhenong Jin, Bin Peng, Jinyun Tang, Evan H. DeLucia, Paul C. West, Chongya Jiang, Sheng Wang, Taegon Kim, Wang Zhou, Tim Griffis, Licheng Liu, Wendy H. Yang, Ziqi Qin, Qi Yang, Andrew Margenot, Emily R. Stuchiner, Vipin Kumar, Carl Bernacchi, Jonathan Coppess, Kimberly A. Novick, James Gerber, Molly Jahn, Madhu Khanna, DoKyoung Lee, Zhangliang Chen, Shang-Jen Yang",Earth-Science Reviews,243,104462,en
+2023,상세 공간단위 농업분야 온실가스 배출량 산정 방안 연구,"김솔희, 전혜진, 최지연, 서일환, 전정배, 김태곤",한국농공학회논문집,"","",ko
+2023,"농산물 재배 방식에 따른 사회, 경제, 환경 영향 비교 - 농산물 소득조사 자료와 스마트팜 실태조사 보고서를 기반으로 -","이지민, 김태곤",농촌계획,"","",ko
+2022,The critical benefits of snowpack insulation and snowmelt for winter wheat productivity,"Peng Zhu, Taegon Kim, Zhenong Jin, Chenxi Lin, Xuhui Wang, Philippe Ciais, Nathaniel D. Mueller, Amir Aghakouchak, Jianxi Huang, David Mulla, David Makowski",Nature Climate Change,12,485-490,en
+2022,Distinct driving mechanisms of non-growing season N2O emissions call for spatial-specific mitigation strategies in the US Midwest,"Yufeng Yang, Licheng Liu, Wang Zhou, Kaiyu Guan, Jinyun Tang, Taegon Kim, Robert F. Grant, Bin Peng, Peng Zhu, Ziyi Li, Timothy J. Griffis, Zhenong Jin",Agricultural and Forest Meteorology,324,109108,en
+2022,Review: An integrated framework for understanding ecological drought and drought resistance,"Sayed Shah Jan Sadiqi, Eun-Mi Hong, Won-Ho Nam, Taegon Kim",Science of the Total Environment,"","",en
+2022,High-Resolution Environmentally Extended Input-Output Model to Assess the Greenhouse Gas Impact of Electronics in South Korea,"Yi Yang, Yujin Park, Timothy M. Smith, Taegon Kim, Hung-Suck Park",Environmental Science & Technology,56(4),2107-2114,en
+2022,KGML-ag: a modeling framework of knowledge-guided machine learning to simulate agroecosystems: a case study of estimating N2O emission using data from mesocosm experiments,"Licheng Liu, Shaoming Xu, Jinyun Tang, Kaiyu Guan, Timothy J. Griffis, Matthew D. Erickson, Alexander L. Frie, Xiaowei Jia, Taegon Kim, Lee T. Miller, Bin Peng, Shaowei Wu, Yufeng Yang, Wang Zhou, Vipin Kumar, Zhenong Jin",Geoscientific Model Development,15(7),2839-2858,en
+2022,농업환경 공간정보 국가 격자체계 적용 방안: 자동 변환 툴 개발 및 표준화 전략 마련,"장은미, 홍선희, 김지원, 김태곤, 이경도",한국지도학회지,22(3),"",ko
+2021,Land use leverage points to reduce GHG emissions in U.S. agricultural supply chains,"Rylie E O Pelton, Seth A. Spawn-Lee, Tyler J. Lark, Taegon Kim, Nathaniel Springer, Peter Hawthorne, Deepak K. Ray, Jennifer Schmitt",Environmental Research Letters,16,115002,en
+2021,가뭄사상 및 농업수리시설물이 쌀 생산량에 미치는 영향에 대한 상관 분석,"우승범, 남원호, 전민기, 윤동현, 김태곤, 성재훈, 김한중",한국농공학회논문집,63(5),95-105,ko
