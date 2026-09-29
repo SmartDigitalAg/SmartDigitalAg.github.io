@@ -23,7 +23,7 @@ en: &DEFAULT_EN
     fields:
       - title: "Digital Agriculture"
         desc: "Advancing agricultural production and management through sensor technologies, IoT, and data-driven analytics."
-        image: "assets/img/focus/digital-agriculture.jfif"
+        image: "assets/img/focus/digital-agriculture.jpg"
         alt: "Digital agriculture"
 
       - title: "Crop Modeling"
