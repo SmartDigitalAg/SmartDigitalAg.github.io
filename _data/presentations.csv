@@ -91,7 +91,7 @@
 2026,추계,국내,생물환경조절학회,,포스터,석승원,,,,,,다중 기상 예보 자료를 결합한 일사 예측 및 시설원예 활용 가능성 분석,Solar Radiation Forecasting Using Multiple Meteorological Data Sources for Greenhouse Management,,저일조,,,,,,
 2026,추계,국내,생물환경조절학회,,구두,정재영,,,,,,Sentinel-2 시계열 영상을 활용한 머신러닝 기반 논콩 및 논벼 분류모델의 연도 간 적용성과 조기 분류 가능성 분석,Interannual Transferability and Early-Season Classification of Paddy-Field Soybean and Rice Using Machine Learning and Sentinel-2 Time-Series Imagery,,위성,위성,,,,,
 2026,추계,국내,생물환경조절학회,,포스터,전혜진,,,,,,다중 출처 농업 데이터를 연계한 MCP 기반 LLM 의사결정지원시스템 개발,Development of an MCP-Based LLM Decision Support System Integrating Multi-Source Agricultural Data,,계약정원제,계약정원제,,,,,
-2026,추계,국내,생물환경조절학회,,포스터,채경원,,,,,,전천카메라 영상의 시공간 특징을 이용한 단기 일사량 예측,Short-Term Forecasting of Cumulative Solar Irradiance Using Spatiotemporal Features from All-Sky Camera Images,,저일조,저일조,,,,,
+2026,추계,국내,생물환경조절학회,,포스터,채경원,,,,,,어안렌즈 전천 영상의 시공간 특징을 이용한 단기 일사 차단 예측,Short-Term Forecasting of Cloud-Induced Solar Occlusion Using Spatiotemporal Features from Fisheye All-Sky Images,,저일조,저일조,,,,,
 2026,추계,국내,생물환경조절학회,,포스터,장은수,,,,,,전천 이미지 기반 일사량 단기 예측 모델 설계를 위한 탐색적 데이터 분석,Exploratory Data Analysis for Designing a Short-Term Solar Irradiance Forecasting Model Based on All-Sky Images,,저일조,저일,,,,,
 2026,동계,국제,AGU,,포스터,석승원,,,,,,,,,메타,메타,,,,,
 2026,동계,국제,AGU,,포스터,정재영,,,,,,,Satellite-Based Mapping of Paddy-Grown Soybean in the Republic of Korea Using Sentinel Time-Series Data and Machine Learning,,위성,위성,,,,,
