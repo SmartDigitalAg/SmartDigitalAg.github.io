@@ -59,7 +59,7 @@
                   </ul>
                 {% elsif person.number_educ == 4 %}
                   <ul class="list-inline">
-                    <li><strong>Research Interest:</strong> {{ person.major }}</li>
+                    {% if person.major %}<li><strong>Research Interest:</strong> {{ person.major }}</li>{% endif %}
                     <li><strong>Email:</strong> {{ person.email }}
                       <a class="icon_link" href="#" onclick="copyToClipboard('{{ person.email }}'); return false;">
                         <i class="fas fa-copy"></i>

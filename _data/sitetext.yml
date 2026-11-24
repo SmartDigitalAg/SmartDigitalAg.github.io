@@ -254,9 +254,9 @@ en: &DEFAULT_EN
 #          - url: https://linkedin.com
 #            icon: fab fa-github
       - name: Dr. Donghyeon Kim
-        kor_name: 김동현 박사
-        photo: assets/img/team/donghyeon.jpg
-        info: Research Assistant Professor
+        kor_name: 김동현 교수
+        photo: assets/img/team/donghyeon_update.jpg
+        info: Adjunct Assistant Professor
         email: kdh4354@jbnu.ac.kr
         number_educ: 2
         social:
@@ -303,35 +303,18 @@ en: &DEFAULT_EN
           - url: https://github.com/202116302
             icon: fab fa-github
 
-      # - name: Huiwon Yang
-      #   kor_name: 양희원
-      #   photo: assets/img/team/huiwon.jpg
-      #   info: Master Course
-      #   email: gmldnjs4212@jbnu.ac.kr
-      #   number_educ: 4
-      #   major: (fill in your major)
-      #   social:
-      #     #          - url: #
-      #     #            icon: fas fa-envelope
-      #     #          - url: https://facebook.com
-      #     #            icon: fab fa-facebook-f
-      #     - url: https://github.com/yanghuiwon22
-      #       icon: fab fa-github
-
-      ### 학부 연구생(5) ###
       - name: Huiwon Yang
         kor_name: 양희원
         photo: assets/img/team/huiwon.jpg
-        info: Undergraduate Intern
+        info: Master Course
         email: gmldnjs4212@jbnu.ac.kr
-        number_educ: 5
+        number_educ: 4
+        # major: (연구 분야 확인 후 입력)
         social:
-          #          - url: #
-          #            icon: fas fa-envelope
-          #          - url: https://facebook.com
-          #            icon: fab fa-facebook-f
           - url: https://github.com/yanghuiwon22
             icon: fab fa-github
+
+      ### 학부 연구생(5) ###
 
       # - name: Miso Kim
       #   kor_name: 김미소
@@ -347,19 +330,15 @@ en: &DEFAULT_EN
       #     - url: https://github.com/oosim
       #       icon: fab fa-github
 
-      - name: Eunsu Jang
-        kor_name: 장은수
-        photo: assets/img/team/eunsu_update.jpg
-        info: Undergraduate Intern
-        email: jangdmstn@jbnu.ac.kr
-        number_educ: 5
-        social:
-          #          - url: #
-          #            icon: fas fa-envelope
-          #          - url: https://facebook.com
-          #            icon: fab fa-facebook-f
-          - url: https://github.com/oneunsu-del
-            icon: fab fa-github
+      # - name: Eunsu Jang
+      #   kor_name: 장은수
+      #   photo: assets/img/team/eunsu_update.jpg
+      #   info: Undergraduate Intern
+      #   email: jangdmstn@jbnu.ac.kr
+      #   number_educ: 5
+      #   social:
+      #     - url: https://github.com/oneunsu-del
+      #       icon: fab fa-github
 
       - name: kyeongwon Chae
         kor_name: 채경원
@@ -389,19 +368,15 @@ en: &DEFAULT_EN
       #     - url: https://github.com/ixiwest0
       #       icon: fab fa-github
 
-      - name: Gyuhyeon Lee
-        kor_name: 이규현
-        photo: assets/img/team/gyuhyeon.png
-        info: Undergraduate Intern
-        email: gyuhyeoni@jbnu.ac.kr
-        number_educ: 5
-        social:
-          #          - url: #
-          #            icon: fas fa-envelope
-          #          - url: https://facebook.com
-          #            icon: fab fa-facebook-f
-          - url: https://github.com/ironmanizawesome
-            icon: fab fa-github
+      # - name: Gyuhyeon Lee
+      #   kor_name: 이규현
+      #   photo: assets/img/team/gyuhyeon.png
+      #   info: Undergraduate Intern
+      #   email: gyuhyeoni@jbnu.ac.kr
+      #   number_educ: 5
+      #   social:
+      #     - url: https://github.com/ironmanizawesome
+      #       icon: fab fa-github
 
       ### 스태프(6) ###
 #      - name: Hyejin Jeon
@@ -416,26 +391,33 @@ en: &DEFAULT_EN
 #            icon: fab fa-github
 
       ### 졸업생 ###
+      # 정렬: 나간 연도 순(오래된 사람이 위), 같은 해에 나갔으면 들어온 순. 새 졸업생은 맨 아래에 추가.
 #      - name: 양희원
 #        info: Undergraduate Intern, 2023–2025
 #        number_educ: 7
 
-      - name: 강다영
-        info: Undergraduate Intern, 2022 - DGIST
-        number_educ: 7
       - name: 김솔아
         info: Undergraduate Intern, 2022 - KAIST
+        number_educ: 7
+      - name: 강다영
+        info: Undergraduate Intern, 2022 - DGIST
         number_educ: 7
       - name: 하다은
         info: Undergraduate Intern, 2023 - 2024
         number_educ: 7
-      - name: 김미소
-        info: Undergraduate Intern, 2024 - 2026
-        number_educ: 7
       - name: 김하종
         info: Undergraduate Intern, 2025 - 2025
         number_educ: 7
+      - name: 김미소
+        info: Undergraduate Intern, 2024 - 2026
+        number_educ: 7
+      - name: 장은수
+        info: Undergraduate Intern, 2025 - 2026
+        number_educ: 7
       - name: 임서영
+        info: Undergraduate Intern, 2026 - 2026
+        number_educ: 7
+      - name: 이규현
         info: Undergraduate Intern, 2026 - 2026
         number_educ: 7
 
