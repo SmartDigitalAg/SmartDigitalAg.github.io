@@ -8,6 +8,7 @@
 #
 # 필드
 #   year   : 연도 (문자열)
+#   season : 춘계/하계/추계/동계 (같은 연도 안 정렬용, 없으면 그해 맨 아래)
 #   who    : 수상자. 여러 명이면 가운뎃점(·)으로 연결
 #   title  : 발표/과제 제목. 없으면 생략 (교수 개인상 등)
 #   venue  : 학회 / 대회명
@@ -15,7 +16,30 @@
 #   detail : 자세히 보기 링크 (사이트 내부 페이지)
 #   links  : 언론 기사 URL 목록
 
+# TODO(2026-11): 김태곤 교수님 한국농공학회 수상. 정확한 상 이름을 확인한 뒤
+#   award를 고치고 주석을 풀 것. season도 수상 시기에 맞게 확인.
+# - year: "2026"
+#   season: 추계
+#   who: 김태곤
+#   venue: 한국농공학회
+#   award: 학회상
+
+- year: "2026"
+  season: 추계
+  who: 채경원·전혜진·정재영·양희원·장은수·이규현
+  title: 멀티모달 AI 기반 지능형 농업 의사결정 지원 서비스
+  venue: 제2회 AI 학생경진대회
+  award: 한국농어촌공사 사장상
+
+- year: "2026"
+  season: 추계
+  who: 양희원·석승원·전혜진·정재영·장은수·조혜윤
+  title: 디지털 트윈 기반 스마트 온실 제어 시스템
+  venue: 제5회 농공학생 창의아이디어 및 종합설계 경진대회
+  award: 한국농공학회장상
+
 - year: "2025"
+  season: 추계
   who: 정재영·석승원·장은수
   title: 농업용 저수지 수위 및 다출처 데이터를 활용한 저수지 운영 인공지능 모델 개발
   venue: KSAE AX-Water Challenge 2025
@@ -23,6 +47,7 @@
   detail: /news/ksae-ax-water-2025/
 
 - year: "2025"
+  season: 하계
   who: 석승원
   title: 케일의 일단위 엽팽창 속도 및 동화산물 추정 모형 개발
   venue: 한국원예학회(제121차)
@@ -32,6 +57,7 @@
     - https://www.jjn.co.kr/news/articleView.html?idxno=1013357
 
 - year: "2025"
+  season: 추계
   who: 전혜진·정재영·석승원·김미소·김하종·장은수
   title: 농업 통계 및 예측 모델을 이용한 시군구 단위 지도화 플랫폼 개발
   venue: 제4회 농공창의아이디어 경진대회
@@ -41,6 +67,7 @@
     - http://www.veritas-a.com/news/articleView.html?idxno=592172
 
 - year: "2025"
+  season: 추계
   who: 김동현
   title: Improving wheat yield and water use efficiency through soil water-guided furrow irrigation and hydraulic simulation
   venue: 2025 PAWEES International Conference
@@ -49,6 +76,7 @@
     - https://www.jjn.co.kr/news/articleView.html?idxno=1024003
 
 - year: "2024"
+  season: 추계
   who: 김태곤
   venue: 한국농공학회
   award: 젊은 과학자상
@@ -64,6 +92,7 @@
     - https://news.unn.net/news/articleView.html?idxno=570539
 
 - year: "2023"
+  season: 추계
   who: 김솔희
   title: 노지 스마트팜 도입에 따른 과채류 생산단계 탄소배출량 평가
   venue: 한국농공학회

@@ -19,12 +19,21 @@
 {% capture years_raw %}{% for r in pres %}{% assign bigo = r["비고"] | strip %}{% assign lead = r["주저자"] | strip %}{% if bigo != "" and lead != "-" and lead != "" %}{{ r["연도"] }} {% endif %}{% endfor %}{% for m in manual %}{{ m.year }} {% endfor %}{% endcapture %}
 {% assign years = years_raw | split: " " | uniq | sort | reverse %}
 
+{% comment %}
+  정렬: 위로 갈수록 최신. 연도 → 시즌(동계→추계→하계→춘계) 역순으로 돌고,
+  같은 시즌 안에서는 시트를 아래에서부터(최근 추가 행 먼저) 출력한 뒤
+  같은 시즌의 수동 항목(awards_manual.yml 순서)을 출력한다.
+  시즌이 비었거나 처음 보는 값이면 '기타'로 보고 그해 맨 아래에 둔다.
+{% endcomment %}
+{% assign seasons = "동계,추계,하계,춘계,기타" | split: "," %}
+
 <div class="news-board">
 {% for y in years %}
   <h2>{{ y }}</h2>
   <ul>
+{% for s in seasons %}
 {% comment %} ── 시트에서 온 학술발표 수상 ── {% endcomment %}
-{% for r in pres %}{% assign bigo = r["비고"] | strip %}{% assign lead = r["주저자"] | strip %}{% if r["연도"] == y and bigo != "" and lead != "-" and lead != "" %}
+{% for r in pres reversed %}{% assign bigo = r["비고"] | strip %}{% assign lead = r["주저자"] | strip %}{% assign ss = r["시즌"] | strip %}{% unless seasons contains ss %}{% assign ss = "기타" %}{% endunless %}{% if ss == "" %}{% assign ss = "기타" %}{% endif %}{% if r["연도"] == y and ss == s and bigo != "" and lead != "-" and lead != "" %}
 {%- assign v = r["학회"] | strip -%}
 {%- assign override = nil -%}
 {%- if site.data.venues -%}{%- assign override = site.data.venues[v] -%}{%- endif -%}
@@ -48,9 +57,10 @@
 {%- endunless -%}
 {% endif %}{% endfor %}
 {% comment %} ── 수동 관리 항목 ── {% endcomment %}
-{% for m in manual %}{% if m.year == y %}
+{% for m in manual %}{% assign ms = m.season | default: "기타" %}{% unless seasons contains ms %}{% assign ms = "기타" %}{% endunless %}{% if m.year == y and ms == s %}
     <li>{{ m.who }}, {% if m.title %}&ldquo;{{ m.title }}&rdquo;, {% endif %}{{ m.venue }}, <strong>{{ m.award }}</strong>{% if m.detail %} <a href="{{ m.detail | relative_url }}">자세히 &rarr;</a>{% endif %}{% if m.links %}{% if m.links.size > 1 %}{% for u in m.links %} <a href="{{ u }}">기사{{ forloop.index }} &rarr;</a>{% endfor %}{% else %} <a href="{{ m.links[0] }}">기사 &rarr;</a>{% endif %}{% endif %}</li>
 {% endif %}{% endfor %}
+{% endfor %}
   </ul>
 {% endfor %}
 </div>
