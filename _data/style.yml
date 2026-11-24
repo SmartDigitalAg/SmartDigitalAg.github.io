@@ -13,8 +13,8 @@ contact-image: "../img/contact.png"
 fonts_urls:
     - "https://fonts.googleapis.com/css?family=Montserrat:400,700"
     - "https://fonts.googleapis.com/css?family=Kaushan+Script"
-    - "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
-    - "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    # 본문: Wanted Sans (가장 얇은 굵기가 400)
+    - "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css"
 
 # Set custom fonts
 fonts:
@@ -22,7 +22,7 @@ fonts:
     for: "heading"
   - name: "Kaushan Script"
     for: "script"
-  - name: "Droid Serif"
+  - name: "Wanted Sans"
     for: "serif"
-  - name: "Roboto Slab"
+  - name: "Wanted Sans"
     for: "body"

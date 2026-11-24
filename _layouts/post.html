@@ -5,11 +5,9 @@ nav: post
 
 <div class="post-content-wrapper">
   <div class="container post-container">
-      <!-- Meta (date · read time) -->
+      <!-- Meta (date) -->
     <div class="post-meta text-muted small mb-2">
       {{ page.date | date: "%b %e" }}
-      ·
-      {{ page.content | number_of_words | divided_by:250 | ceil }} min read
     </div>
 
     <!-- Title -->

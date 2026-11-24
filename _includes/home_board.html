@@ -22,12 +22,15 @@
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="board-head">
           <h2 class="board-title">News</h2>
-          <a class="board-more" href="{{ '/news' | relative_url }}">전체 보기 <span aria-hidden="true">&rarr;</span></a>
+          <a class="board-more" href="{{ '/news' | relative_url }}">전체 보기</a>
         </div>
         <ul class="board-list">
-{%- assign shown = 0 -%}
+{%- assign shown = 0 -%}{%- assign last_y = "" -%}
+{%- comment -%} 정렬 규칙은 news_awards.html과 동일 (연도 → 시즌 역순 → 시트 역순 → 수동) {%- endcomment -%}
+{%- assign seasons = "동계,추계,하계,춘계,기타" | split: "," -%}
 {%- for y in years -%}
-{%- for r in pres -%}{%- assign bigo = r["비고"] | strip -%}{%- assign lead = r["주저자"] | strip -%}{%- if shown < 5 and r["연도"] == y and bigo != "" and lead != "-" and lead != "" -%}
+{%- for s in seasons -%}
+{%- for r in pres reversed -%}{%- assign bigo = r["비고"] | strip -%}{%- assign lead = r["주저자"] | strip -%}{%- assign ss = r["시즌"] | strip -%}{%- unless seasons contains ss -%}{%- assign ss = "기타" -%}{%- endunless -%}{%- if ss == "" -%}{%- assign ss = "기타" -%}{%- endif -%}{%- if shown < 5 and r["연도"] == y and ss == s and bigo != "" and lead != "-" and lead != "" -%}
 {%- assign v = r["학회"] | strip -%}
 {%- assign override = nil -%}
 {%- if site.data.venues -%}{%- assign override = site.data.venues[v] -%}{%- endif -%}
@@ -41,24 +44,25 @@
 {%- assign t = r["국문 제목"] | strip -%}
 {%- if t == "-" or t == "" -%}{%- assign t = r["영문 제목"] | strip -%}{%- endif -%}
           <li class="board-item">
+            <span class="board-item-date">{% if y != last_y %}{{ y }}{% assign last_y = y %}{% endif %}</span>
             <a class="board-link" href="{{ '/news' | relative_url }}">
-              <span class="board-item-title">{{ t }}</span>
-              <span class="board-item-meta">{{ venue }} &middot; {{ bigo }}</span>
+              <span class="board-item-title">{{ lead }}, {{ venue }} {{ bigo }}</span>
+              <span class="board-item-meta">{{ t }}</span>
             </a>
-            <span class="board-item-date">{{ y }}</span>
           </li>
 {%- assign shown = shown | plus: 1 -%}
 {%- endif -%}{%- endfor -%}
-{%- for m in manual -%}{%- if shown < 5 and m.year == y -%}
+{%- for m in manual -%}{%- assign ms = m.season | default: "기타" -%}{%- unless seasons contains ms -%}{%- assign ms = "기타" -%}{%- endunless -%}{%- if shown < 5 and m.year == y and ms == s -%}
           <li class="board-item">
+            <span class="board-item-date">{% if y != last_y %}{{ y }}{% assign last_y = y %}{% endif %}</span>
             <a class="board-link" href="{{ m.detail | default: '/news' | relative_url }}">
-              <span class="board-item-title">{{ m.title | default: m.award }}</span>
-              <span class="board-item-meta">{{ m.venue }} &middot; {{ m.award }}</span>
+              <span class="board-item-title">{{ m.who }}, {{ m.venue }} {{ m.award }}</span>
+              {% if m.title %}<span class="board-item-meta">{{ m.title }}</span>{% endif %}
             </a>
-            <span class="board-item-date">{{ m.year }}</span>
           </li>
 {%- assign shown = shown | plus: 1 -%}
 {%- endif -%}{%- endfor -%}
+{%- endfor -%}
 {%- endfor %}
         </ul>
       </div>
@@ -67,16 +71,17 @@
       <div class="col-lg-6">
         <div class="board-head">
           <h2 class="board-title">Publications</h2>
-          <a class="board-more" href="{{ '/publications' | relative_url }}">전체 보기 <span aria-hidden="true">&rarr;</span></a>
+          <a class="board-more" href="{{ '/publications' | relative_url }}">전체 보기</a>
         </div>
         <ul class="board-list">
+          {% assign last_py = "" %}
           {% for p in papers limit: 5 %}
           <li class="board-item">
+            <span class="board-item-date">{% if p.year != last_py %}{{ p.year }}{% assign last_py = p.year %}{% endif %}</span>
             <a class="board-link" href="{{ '/publications' | relative_url }}">
               <span class="board-item-title">{{ p.title }}</span>
               <span class="board-item-meta">{{ p.journal }}{% assign vol = p.volume | strip %}{% if vol != "" %}, {{ vol }}{% endif %}</span>
             </a>
-            <span class="board-item-date">{{ p.year }}</span>
           </li>
           {% endfor %}
         </ul>
